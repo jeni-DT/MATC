@@ -4,9 +4,12 @@ import "./Signup.css";
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { TextField } from '../TextField';
+import Main from './Main';
+
 
 
 export const Signup = () => {
+ 
   const navigate= useNavigate();
   const validate = Yup.object({
     firstName: Yup.string()
