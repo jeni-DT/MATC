@@ -7,6 +7,7 @@ import './App.css';
 
 import UsemediaQuery from './usemediaQuery';
 import Dashboard from './Dashboard/Dashboard';
+import View from './ReduxCrud/pages/View';
 
 
 
@@ -21,6 +22,7 @@ function App() {
          <Route path="/main" element={<Main />} />
          <Route path='/login' element={<LoginMain/>}/>
          <Route path='/' element={<Dashboard/>}/>
+         <Route path='/view' element={<View/>}/>
          
         
        </Routes>

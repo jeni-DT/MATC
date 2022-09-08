@@ -1,0 +1,26 @@
+{
+    "user":[
+        {
+            "name": "Jeni",
+            "email":"jeni@gmail.com",
+            "phonenumber":9025143828,
+            "Nopass":"2",
+            "pickup":"chathiram bus stand",
+            "drop":"Central bus stand",
+            "Date":"08/09/2022",
+            "time":4.28,
+            "id":1
+        },
+        {
+            "name": "Asha",
+            "email":"asha@gmail.com",
+            "phonenumber":9025143828,
+            "Nopass":"2",
+            "pickup":"chathiram bus stand",
+            "drop":"Central bus stand",
+            "Date":"08/09/2022",
+            "time":4.28,
+            "id":2
+        }
+    ]
+}

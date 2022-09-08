@@ -1,0 +1,29 @@
+.inbox{
+    width: 15vw;
+    background-color: white;
+    border-radius: 8px;
+    height: 6vh;
+    
+}
+.Now{
+    width: 35vw;
+}
+.form{
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 40px
+}
+#reg{
+    text-align: center;
+    color: black;
+    margin-top: 40px;
+    width: 35vw;
+}
+#reset{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    width: 35vw;
+}
