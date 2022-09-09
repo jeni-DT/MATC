@@ -1,20 +1,48 @@
 import React from 'react'
 import { Login } from './Login';
-import loginImg from '/home/dt/Documents/MATC/my-app/src/Admin/assets/login.jpg';
+import LoginImg from '/home/dt/Documents/MATC/my-app/src/Admin/assets/Login.jpg';
+import './Login.css'
+import Foot from '../../../Dashboard/Footer';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 
 
 const LoginMain = () => {
   return (
+    <div>
+      <Navbar bg="dark" variant="dark">
+        <Container >
+          <Navbar.Brand href="/"className='head'>TreZZoH</Navbar.Brand>
+          <Nav className="header">
+          <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/menu">SignUp</Nav.Link>
+            {/* <NavDropdown title="Admin" className='admin' id="basic-nav-dropdown">
+              <NavDropdown.Item href="/main">SignUp</NavDropdown.Item>
+              <NavDropdown.Item href="/login">
+                Login
+              </NavDropdown.Item>
+              
+              <NavDropdown.Divider />
+             
+            </NavDropdown> */}
+          </Nav>
+
+        </Container >
+      </Navbar>
     <div className="container mt-3">
     <div className="row">
-      <div className="col-md-5">
-      <img className="img-fluid w-100" src={loginImg} alt=""/>
+      <div className="col-md-6" id='loginimg'>
+      <img className="img-fluid w-100" src={LoginImg} alt=""/>
       </div>
-      <div className="col-md-7 my-auto">
+      <div className="col-md-6 my-auto">
         <Login/>
       </div>
     </div>
   </div>
+   {/* <Foot/> */}
+   </div>
   )
 }
 

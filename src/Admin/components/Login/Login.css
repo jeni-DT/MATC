@@ -1,0 +1,28 @@
+#loginimg{
+    height: 9vh;
+    margin-top: 40px;
+    
+}
+.label{
+    margin-left:60px ;
+    width: 23vw;
+    border-radius: 4px;
+    height: 35px;
+}
+#loginbtn{
+  
+    margin-left: 70px;
+    width: 10vw;
+    border-radius: 14px;
+    height: 8vh;
+}
+#resetbtn{
+    margin-left: 40px;
+    width: 10vw;
+    border-radius: 14px;
+    height: 8vh;
+}
+#loginhead{
+    text-align: center;
+    margin-top: 20px;
+}

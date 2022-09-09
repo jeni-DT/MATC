@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Formik, Form } from 'formik';
+import './Login.css'
 
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { TextField } from '../TextField';
+import Foot from '../../../Dashboard/Footer';
 
 
 export const Login = () => {
@@ -52,17 +54,23 @@ export const Login = () => {
     >
       {formik => (
         <div>
-          <h1 className="my-4 font-weight-bold .display-4">Login</h1>
+          <h1 className="my-4 font-weight-bold .display-4" id='loginhead'>Login</h1>
           <Form>
            
-            <TextField label="Email" name="email" type="email" />
-            <TextField label="password" name="password" type="password" />
-            <TextField label="Confirm Password" name="confirmPassword" type="password" />
-            <button className="btn btn-dark mt-2" type="submit" id='reg'>Register</button>
-            <button className="btn btn-danger mt-3 ml-3" type="reset" id='reset'>Reset</button>
+            <TextField label="Email" name="email" type="email" className="label" />
+            <TextField label="password" name="password" type="password" className="label"/>
+            <TextField label="Confirm Password" name="confirmPassword" type="password" className="label" />
+            <button className="btn btn-dark mt-2" type="submit" id='loginbtn'>Login</button>
+            
+            <button className="btn btn-danger mt-3 ml-3" type="reset" id='resetbtn'>Reset</button>
           </Form>
+         
         </div>
+        
       )}
+      
     </Formik>
+    
   )
+  
 }

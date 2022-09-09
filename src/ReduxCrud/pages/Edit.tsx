@@ -1,19 +1,35 @@
 
 import { Formik ,Form} from 'formik'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
 import { TextField } from '../../Admin/components/TextField';
 import * as Yup from 'yup';
-import { useNavigate } from 'react-router-dom';
-import '../pages/View.css'
+import { useLocation, useNavigate } from 'react-router-dom';
+import '../pages/Edit.css'
 import { useDispatch } from 'react-redux';
-import { addUsers } from '../redux/Actions';
+import { updateUser } from '../redux/Actions';
 import { AppDispatch} from "../redux/Store";
-const View = () => {
+import Dashboard from '../../Dashboard/Dashboard';
+
+type datas={
+    name ?: string,
+    email?: string,
+    phonenumber :number,
+    Nopass :number,
+    pickup ?:string,
+    drop ?:string,
+    date ?:string,
+    time?:string,
+    id?:number,
+}
+const Edit = () => {
     const navigate= useNavigate();
     const dispatch =useDispatch<AppDispatch>();
+    const location:any =useLocation();
+    const value=location.state;
+    console.log("location:",value)
     
-   
+
   const validate = Yup.object({
     name: Yup.string()
       .max(15, 'Must be 15 characters or less')
@@ -41,29 +57,32 @@ const View = () => {
       
       .required('Time is required'),
   })
+
   return (
+  <div className='edit'>
     <Formik
       initialValues={{
-        name: '',
-        email: '',
-        phonenumber: '',
-        Nopass:'',
-        pickup:'',
-        drop:'',
-        date:'',
-        time:''
+        id:value.id,
+        name: value.name,
+        email: value.email,
+         phonenumber: value.phonenumber,
+         Nopass:value.Nopass,
+         pickup:value.pickup,
+         drop:value.drop,
+         date:value.date,
+         time:value.time
       }}
       validationSchema={validate}
       onSubmit={values => {
-        console.log("values",values);
-        dispatch(addUsers(values))
+        
+        dispatch(updateUser(values,values.id));
         navigate('/home');
         
       }}
     >
       {formik => (
-        <div>
-          <h1 className='form'>Booking Form</h1>
+        <div >
+          <h1 className='form'>Update Form</h1>
           <Container>
           <Form>
           <Row>
@@ -82,20 +101,18 @@ const View = () => {
                  </Col>
             </Row>
             <br/>
-            <button className="btn btn-warning mt-2" type="submit" id='reg'>Book Now</button>
-            <button className="btn btn-danger mt-3 ml-3" type="reset" id='reset'>Reset</button>
+            <button className="btn btn-warning mt-5" type="submit" id='Edit'>Update</button>
+            <br></br>
+            <button className="btn btn-danger mt-4 ml-3" type="reset" id='reset'>Reset</button>
             
           </Form>
           </Container>
         </div>
       )}
     </Formik>
-    // <div>
-    //     <Container>
-    //        
-    //     </Container>
-    // </div>
+    </div>
+   
   )
 }
 
-export default View
+export default Edit

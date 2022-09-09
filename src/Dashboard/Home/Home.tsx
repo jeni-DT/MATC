@@ -12,6 +12,7 @@ const Home = () => {
 
     }
   return (
+  
     <div className='body'>
          <Container>
       <Row>

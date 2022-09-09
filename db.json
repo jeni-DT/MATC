@@ -1,26 +1,37 @@
 {
-    "user":[
-        {
-            "name": "Jeni",
-            "email":"jeni@gmail.com",
-            "phonenumber":9025143828,
-            "Nopass":"2",
-            "pickup":"chathiram bus stand",
-            "drop":"Central bus stand",
-            "Date":"08/09/2022",
-            "time":4.28,
-            "id":1
-        },
-        {
-            "name": "Asha",
-            "email":"asha@gmail.com",
-            "phonenumber":9025143828,
-            "Nopass":"2",
-            "pickup":"chathiram bus stand",
-            "drop":"Central bus stand",
-            "Date":"08/09/2022",
-            "time":4.28,
-            "id":2
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "name": "jeni",
+      "email": "asha@gmail.com",
+      "phonenumber": 9025143828,
+      "Nopass": "2",
+      "pickup": "chathiram bus stand",
+      "drop": "Central bus stand",
+      "date": "08/09/2022",
+      "time": 4.28
+    },
+    {
+      "id": 2,
+      "name": "haiyash",
+      "email": "haiyash@gmail.com",
+      "phonenumber": 6733678902,
+      "Nopass": "3",
+      "pickup": "central",
+      "drop": "madurai",
+      "date": "2022-09-10",
+      "time": "19:10"
+    },
+    {
+      "id": 3,
+      "name": "Rosy",
+      "email": "haiyash@gmail.com",
+      "phonenumber": 6733678902,
+      "Nopass": "3",
+      "pickup": "central",
+      "drop": "madurai",
+      "date": "2022-09-10",
+      "time": "19:10"
+    }
+  ]
 }
