@@ -1,37 +1,145 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+
+
+
 import './Dashboard.css';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+
 import Foot from './Footer';
-import Carousel from 'react-bootstrap/Carousel';
+import * as FaIcons from 'react-icons/fa';
 import Home from './Home/Home';
+import styled from 'styled-components';
+import {Link } from 'react-router-dom';
+import Car from './Car/Car';
+import Contact from './Contact/Contact';
+
+
+
+export const Nav =styled.nav`
+background:yellow;
+height:80px;
+//  margin-top:-80px;
+display:flex;
+justify-content: center;
+align-items:center;
+font-size:1rem;
+position:sticky;
+top:0;
+z-index:10;
+
+@media screen and (max-width:960px){
+   transition:0.8s all ease;
+}
+`
+export const NavbarContainer = styled.div`
+display:flex;
+justify-content:space-between;
+height: 80px;
+z-index: 1;
+width:100%;
+padding: 0 24px;
+max-width:1100px;
+`
+export const NavLogo = styled(Link)`
+color:black;
+justify-self:flex-start;
+cursor:pointer;
+font-size:1.9rem;
+display:flex;
+align-items:center;
+margin-left:24px;
+font-weight: bold;
+text-decoration: none;
+
+`
+export const NavMenu= styled.ul`
+ display:flex;
+ align-items:center;
+ list-style:none;
+ text-align: center;
+ margin-right:-22px;
+
+ @media screen and (max-width:768px){
+    height:none;
+ }
+ `
+
+ export const NavItem=styled.li`
+  height:80px;
+ `
+ export const NavLinks = styled(Link)`
+ color:black;
+ display:flex;
+ align-items:center;
+ margin-top:30px;
+ text-decoration:none;
+ padding: 0 1rem;
+ height;100%;
+ cursor:pointer;
+
+ &.active{
+    border-bottom:3px solid #01bf71;
+ }
+ `
+ export const NavBtn=styled.nav`
+ display:flex;
+
+ @media screen and (max-width:768px){
+    display:none;
+ }
+ `
+ export const NavBtnLink=styled(Link)`
+ border-radius:50px;
+ background:black;
+ white-apace:nowrap;
+ padding:14px 25px;
+ height:50px;
+ margin-top:15px;
+ color:white;
+ font-size:16px;
+ outline:none;
+ cursor:pointer;
+ transition:all 0.2s ease-in-out;
+ text-decoration:none;
+
+ &:hover{
+    transition:all 0.2s ease-in-out;
+    background:#fff;
+    color:#010606
+ }
+ `;
+
 
  const Dashboard=()=> {
   return (
     <>
     
-      <Navbar bg="dark" variant="dark">
-        <Container >
-          <Navbar.Brand href="/"className='head'>TreZZoH</Navbar.Brand>
-          <Nav className="header">
-          <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/menu">SignUp</Nav.Link>
-            {/* <NavDropdown title="Admin" className='admin' id="basic-nav-dropdown">
-              <NavDropdown.Item href="/main">SignUp</NavDropdown.Item>
-              <NavDropdown.Item href="/login">
-                Login
-              </NavDropdown.Item>
-              
-              <NavDropdown.Divider />
-             
-            </NavDropdown> */}
-          </Nav>
-
-        </Container >
-      </Navbar>
+    <Nav>
+        <NavbarContainer>
+           <NavLogo to="/login">TreZzoH</NavLogo>
+        
+        <NavMenu>
+            <NavItem>
+                <NavLinks to='/'>Home</NavLinks>
+            </NavItem>
+            <NavItem>
+                <NavLinks to='/home'>About</NavLinks>
+            </NavItem>
+            <NavItem>
+                <NavLinks to='/car'>Available</NavLinks>
+            </NavItem>
+            <NavItem>
+                <NavLinks to='/contact'>Contact</NavLinks>
+            </NavItem>
+            <NavBtn>
+                <NavBtnLink to='/main'>SignUp</NavBtnLink>
+            </NavBtn>
+        </NavMenu>
+        
+        </NavbarContainer>
+    </Nav>
      
       <Home/>
+      <Car/>
+      <Contact/>
       <footer>
       <Foot/>
       </footer>
@@ -40,69 +148,7 @@ import Home from './Home/Home';
     
   );
 }
-  // export function UncontrolledExample() {
-  //   return (
-  //     <Carousel>
-  //       <Carousel.Item>
-  //         <img
-  //           className="d-block w-100"
-  //           src="https://images.pexels.com/photos/1148215/pexels-photo-1148215.jpeg?auto=compress&cs=tinysrgb&w=600"
-  //           alt="First slide"
-  //         />
-  //         <Carousel.Caption>
-  //           <h3>First slide label</h3>
-  //           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-  //         </Carousel.Caption>
-  //       </Carousel.Item>
-  //       <Carousel.Item>
-  //         <img
-  //           className="d-block w-100"
-  //           src="https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&w=600"
-  //           alt="Second slide"
-  //         />
-  
-  //         <Carousel.Caption>
-  //           <h3>Second slide label</h3>
-  //           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  //         </Carousel.Caption>
-  //       </Carousel.Item>
-  //       <Carousel.Item>
-  //         <img
-  //           className="d-block w-100"
-  //           src="https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&w=600"
-  //           alt="Third slide"
-  //         />
-  
-  //         <Carousel.Caption>
-  //           <h3>Third slide label</h3>
-  //           <p>
-  //             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-  //           </p>
-  //         </Carousel.Caption>
-  //       </Carousel.Item>
-  //     </Carousel>
-      
-     
-  //   );
-  // }
-   
-//    export const Details=()=>{
-//     return(
-//       <div className="container">
-//   <div className="row">
-//     <div className="col">
-//       1 of 3
-//     </div>
-//     <div className="col-6">
-//       2 of 3 (wider)
-//     </div>
-//     <div className="col">
-//       3 of 3
-//     </div>
-//   </div>
-// </div>
-//     )
-//    }
+ 
 
 export default Dashboard;
 

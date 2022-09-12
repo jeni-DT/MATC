@@ -10,14 +10,18 @@ import Dashboard from './Dashboard/Dashboard';
 import View from './ReduxCrud/pages/View';
 import Home from './ReduxCrud/pages/Home';
 import Edit from './ReduxCrud/pages/Edit';
+import Navbar from './Admin/Navbar/Index';
+import Sidebar from './Admin/Navbar/Sidebar.tsx/Index';
+import Car from './Dashboard/Car/Car';
+import Contact from './Dashboard/Contact/Contact';
 
 
 
 function App() {
-  const matches = UsemediaQuery("(min-width:600px)");
+  // const matches = UsemediaQuery("(min-width:200px)");
   return (
     <div className="App">
-      {matches ?
+      {/* {matches ? */}
       <Routes>
          
         
@@ -27,10 +31,14 @@ function App() {
          <Route path='/view' element={<View/>}/>
          <Route path='/home' element={<Home/>}/>
          <Route path='/edit/:id' element={<Edit/>}/>
+         <Route path='/admin' element={<Navbar/>}/>
+         <Route path='/sidebar' element={<Sidebar/>}/>
+         <Route path='/car' element={<Car/>}/>
+         <Route path='/contact' element={<Contact/>}/>
          
         
        </Routes>
-:"hello"}
+{/* :"hello"} */}
     </div>
   );
 }
