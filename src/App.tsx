@@ -14,6 +14,7 @@ import Navbar from './Admin/Navbar/Index';
 import Sidebar from './Admin/Navbar/Sidebar.tsx/Index';
 import Car from './Dashboard/Car/Car';
 import Contact from './Dashboard/Contact/Contact';
+import About from './Dashboard/About/About';
 
 
 
@@ -35,6 +36,7 @@ function App() {
          <Route path='/sidebar' element={<Sidebar/>}/>
          <Route path='/car' element={<Car/>}/>
          <Route path='/contact' element={<Contact/>}/>
+         <Route path='/about' element={<About/>}/>
          
         
        </Routes>

@@ -11,6 +11,11 @@ import {Link } from 'react-router-dom';
 import Car from './Car/Car';
 import Contact from './Contact/Contact';
 
+import { Suspense,lazy } from 'react';
+
+
+
+
 
 
 export const Nav =styled.nav`
@@ -107,7 +112,7 @@ export const NavMenu= styled.ul`
  }
  `;
 
-
+ const LazyComponent:any =lazy(()=>import('../Dashboard/About/About'));
  const Dashboard=()=> {
   return (
     <>
@@ -121,7 +126,7 @@ export const NavMenu= styled.ul`
                 <NavLinks to='/'>Home</NavLinks>
             </NavItem>
             <NavItem>
-                <NavLinks to='/home'>About</NavLinks>
+                <NavLinks to='/about'>About</NavLinks>
             </NavItem>
             <NavItem>
                 <NavLinks to='/car'>Available</NavLinks>
@@ -130,7 +135,7 @@ export const NavMenu= styled.ul`
                 <NavLinks to='/contact'>Contact</NavLinks>
             </NavItem>
             <NavBtn>
-                <NavBtnLink to='/main'>SignUp</NavBtnLink>
+                <NavBtnLink to='logout'>Logout</NavBtnLink>
             </NavBtn>
         </NavMenu>
         
@@ -140,6 +145,10 @@ export const NavMenu= styled.ul`
       <Home/>
       <Car/>
       <Contact/>
+      <Suspense fallback={<div>Loading.....</div>}>
+      <LazyComponent/>
+      </Suspense>
+     
       <footer>
       <Foot/>
       </footer>

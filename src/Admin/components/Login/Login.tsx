@@ -39,7 +39,7 @@ export const Login = () => {
           console.log(adminvalues)
           const adminLogin = adminvalues.filter((value:any) =>{
             if(value.email === values.email && value.password === values.password && value.confirmPassword === values.confirmPassword){
-              navigate('/main')
+              navigate('/')
             }
             else{
               setError('Invalid credentials')

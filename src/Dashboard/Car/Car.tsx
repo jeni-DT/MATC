@@ -23,7 +23,7 @@ Rs.13/Km</p>
 Rs.11/Km</p>
 <p className='info'>Passengers----
 4 persons</p>
-<a href="/" className="btn btn-primary" id='btnbook'>Book Taxi</a>
+<a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>
 </div>
@@ -37,7 +37,7 @@ Rs.11/Km</p>
     <p className='info'>One-way trip rate/km----Rs.14/Km</p>
 <p className='info'>Round trip rate/km----Rs.12/Km</p>
 <p className='info'>Passengers----4 persons</p>
-<a href="/" className="btn btn-primary" id='btnbook'>Book Taxi</a>
+<a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>
 </div>
@@ -59,7 +59,7 @@ Rs.11/Km</p>
 <p className='info'>Round trip rate/km----Rs.16/Km</p>
 <p className='info'>Passengers----6 persons</p>
 <br/>
-<a href="/" className="btn btn-primary" id='btnbook'>Book Taxi</a>
+<a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>
 </div>
@@ -73,7 +73,7 @@ Rs.11/Km</p>
     <p className='info'>One-way trip rate/km----Rs.20/Km</p>
 <p className='info'>Round trip rate/km----Rs.18/Km</p>
 <p className='info'>Passengers----8 persons</p>
-<a href="/" className="btn btn-primary" id='btnbook'>Book Taxi</a>
+<a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>
 </div>
