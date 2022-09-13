@@ -12,6 +12,7 @@ import Car from './Car/Car';
 import Contact from './Contact/Contact';
 
 import { Suspense,lazy } from 'react';
+import About from './About/About';
 
 
 
@@ -112,7 +113,7 @@ export const NavMenu= styled.ul`
  }
  `;
 
- const LazyComponent:any =lazy(()=>import('../Dashboard/About/About'));
+
  const Dashboard=()=> {
   return (
     <>
@@ -145,9 +146,7 @@ export const NavMenu= styled.ul`
       <Home/>
       <Car/>
       <Contact/>
-      <Suspense fallback={<div>Loading.....</div>}>
-      <LazyComponent/>
-      </Suspense>
+     <About/>
      
       <footer>
       <Foot/>
