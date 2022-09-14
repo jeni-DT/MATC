@@ -20,22 +20,27 @@
     font-size: 25px;
     font-weight: bold;
 }
-.info{
-    text-align: center;
-    color: black;
-    font-size: 10px;
+#btnbook{
+    border-radius: 20px;
+    background-color: black;
+    
+    
 }
+
 #item{
     height: 700px;
 }
 #items{
     height: 20vh;
 }
-#btnbook{
-    border-radius: 20px;
-    background-color: black;
-    
-}
+@media only screen and (max-width: 600px) {
+    #btnbook{
+        width: 100px;
+        border-radius: 20px;
+        background-color: black;
+    }
+  }
+
 #btnbook:hover{
     background: yellow;
     

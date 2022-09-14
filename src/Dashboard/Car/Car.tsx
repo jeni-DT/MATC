@@ -1,5 +1,13 @@
 import React from 'react'
 import './Car.css';
+import styled from 'styled-components';
+
+const Info =styled.p`
+text-align: center;
+    color: black;
+    font-size: 10px;
+`
+
 
 const Car = () => {
   return (
@@ -17,12 +25,12 @@ const Car = () => {
    
   <div className="card-body"id='type'>
     <h5 className="card-title">Suzuki Dzire</h5>
-    <p className='info'>One-way trip rate/km----
-Rs.13/Km</p>
-<p className='info'>Round trip rate/km----
-Rs.11/Km</p>
-<p className='info'>Passengers----
-4 persons</p>
+    <Info>One-way trip rate/km----
+Rs.13/Km</Info>
+<Info>Round trip rate/km----
+Rs.11/Km</Info>
+<Info>Passengers----
+4 persons</Info>
 <a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>
@@ -34,10 +42,11 @@ Rs.11/Km</p>
    
   <div className="card-body"id='type'>
     <h5 className="card-title">Toyota Etios</h5>
-    <p className='info'>One-way trip rate/km----Rs.14/Km</p>
-<p className='info'>Round trip rate/km----Rs.12/Km</p>
-<p className='info'>Passengers----4 persons</p>
+    <Info>One-way trip rate/km----Rs.14/Km</Info>
+<Info>Round trip rate/km----Rs.12/Km</Info>
+<Info>Passengers----4 persons</Info>
 <a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
+
    
   </div>
 </div>
@@ -55,9 +64,9 @@ Rs.11/Km</p>
    
   <div className="card-body"id='type'>
     <h5 className="card-title">Mahendra Xylo</h5>
-    <p className='info'>One-way trip rate/km----Rs.18/Km</p>
-<p className='info'>Round trip rate/km----Rs.16/Km</p>
-<p className='info'>Passengers----6 persons</p>
+    <Info>One-way trip rate/km----Rs.18/Km</Info>
+<Info>Round trip rate/km----Rs.16/Km</Info>
+<Info>Passengers----6 persons</Info>
 <br/>
 <a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
@@ -70,9 +79,9 @@ Rs.11/Km</p>
    
   <div className="card-body"id='type'>
     <h5 className="card-title">Toyota Innova</h5>
-    <p className='info'>One-way trip rate/km----Rs.20/Km</p>
-<p className='info'>Round trip rate/km----Rs.18/Km</p>
-<p className='info'>Passengers----8 persons</p>
+    <Info>One-way trip rate/km----Rs.20/Km</Info>
+<Info>Round trip rate/km----Rs.18/Km</Info>
+<Info>Passengers----8 persons</Info>
 <a href="/main" className="btn btn-primary" id='btnbook'>Book Taxi</a>
    
   </div>

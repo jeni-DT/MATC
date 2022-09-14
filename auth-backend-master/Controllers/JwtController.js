@@ -6,7 +6,7 @@ exports.SignUp = async (req, res) => {
 
   let userData = await users.find((data) => data.email === email);
   console.log('user Data', userData);
-  if (userData?.length)
+  if (userData.length)
     res.status(400).json({ status: 'Failed', Message: 'User Already Exists' });
   else {
     users.push({ email, password });

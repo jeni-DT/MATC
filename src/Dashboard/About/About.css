@@ -14,6 +14,15 @@
     font-weight: bold;
     font-size: 60px;
 }
+@media only screen and (max-width: 600px) {
+    .slogo{
+        text-align: center;
+        color: black;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+    }
+  }
 .about{
     font-weight: bold;
     text-align: center;
@@ -31,8 +40,15 @@
     text-align: center;
     background-color: yellow;
     border-radius: 50px;
-    margin-left: 220px;
+    margin-left: 180px;
 }
+@media only screen and (max-width: 600px) {
+    .ref{
+       text-align: center;
+       
+      
+    }
+  }
 .con{
     text-align: center;
     font-size: 40px;

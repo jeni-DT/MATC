@@ -5,6 +5,7 @@ import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import { TextField } from '../TextField';
 import Main from './Main';
+import { newAxios } from '../../Interceptor/Axios/Index';
 
 
 
@@ -39,8 +40,22 @@ export const Signup = () => {
       }}
       validationSchema={validate}
       onSubmit={values => {
-        localStorage.setItem("admin",JSON.stringify([values]));
-        navigate('/login');
+        // localStorage.setItem("admin",JSON.stringify([values]));
+        // navigate('/login');
+        const admin = localStorage.getItem("data from admin");
+        localStorage.setItem("Data from Admin", JSON.stringify([values]));
+        const {firstName,lastName,email,password,confirmPassword} = values;
+        newAxios
+        .post("/auth/signup", { email, password })
+        .then((responce) => {
+          if (responce.status === 201) {
+            navigate("/login");
+          } else {
+            alert("Failed To register User");
+          }
+        })
+        .catch((error) => console.error(error.message));
+        navigate("/login");
         
       }}
     >
