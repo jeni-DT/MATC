@@ -1,35 +1,32 @@
 import axios from "axios";
 
+const createAxios = axios.create({
+    baseURL:'http://localhost:5000/',
+  });
 
-export const newAxios=axios.create({
-    baseURL: 'http://localhost:5000/',
-})
-
-
-const reqInterceptor = newAxios.interceptors.request.use(
+  const reqInterceptor = createAxios.interceptors.request.use(
     async (config) => {
-        const token = localStorage.getItem('access_tocken');
-        config.headers = {
-            'x-access_token': `${token}`,
-        };
-        return config;
+      const token = localStorage.getItem('access_token');
+      config.headers = {
+        'x-access-token': `${token}`,
+      };
+      return config;
     },
     (error) => {
-        return Promise.reject(error);
+      return Promise.reject(error);
     }
-);
-createAxiosResponseInterceptor();
-function createAxiosResponseInterceptor() {
-    newAxios.interceptors.response.use(
+  );
+  createAxiosResponseInterceptor();
+  
+  function createAxiosResponseInterceptor() {
+    createAxios.interceptors.response.use(
       (response) => response,
       (error) => {
         if (
           error.response.data.message ===
           'Unauthorized! Access Token was expired!'
         ) {
-          console.log('test');
-  
-          newAxios.interceptors.response.eject(reqInterceptor);
+          createAxios.interceptors.response.eject(reqInterceptor);
   
           return axios
             .post('http://localhost:5000/auth/refresh', undefined, {
@@ -65,3 +62,5 @@ function createAxiosResponseInterceptor() {
       }
     );
   }
+  
+  export default createAxios;

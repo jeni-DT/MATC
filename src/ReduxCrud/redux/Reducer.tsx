@@ -18,9 +18,17 @@ const usersReducers =(state= initialState, action:any)=>{
                     ...state,
                     loading:false,
                 }
+                case types.POST_USERS:
+                    return{
+                        ...state,
+                        users:action.payload,
+                        loading:false,
+                    }
+                    
         default:
             return state;
     }
+ 
 
     
 };

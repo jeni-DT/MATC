@@ -3,3 +3,4 @@
  export const ADD_DETAILS = "ADD_DETAILS";
  export const GET_UPDATE_USERS = "GET_UPDATE_USERS"
 export const UPDATE_USERS= "UPDATE_USERS";
+export const POST_USERS="POST_USERS";

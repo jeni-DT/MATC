@@ -1,6 +1,8 @@
 import * as types from "./ActionType";
 import axios from "axios";
 import { error } from "console";
+import TokenService from "../../Admin/Interceptor/Service/TokenService";
+import usersReducers from "./Reducer";
 interface editValue{
     name ?: string,
     email?: string,
@@ -19,6 +21,11 @@ const getUsers=(users:any)=>({
 })
 const postUsers=(users:any)=>({
     type:types.ADD_DETAILS,
+  
+
+})
+const postLogin=(users:any)=>({
+    type:types.POST_USERS,
   
 
 })
@@ -89,4 +96,13 @@ const getDetails=(users:any)=>({
         .catch((error)=>console.log(error))
     }
  }
- 
+//  export const getBooking =()=>{
+//     return function (dispatch:any){
+//         axios.get (" http://localhost:5000/")
+//         .then((resp)=>{
+            
+            
+//         })
+//         .catch((error)=>console.log(error))
+//     } 
+//  }
