@@ -12,6 +12,8 @@ import Edit from './ReduxCrud/pages/Edit';
 // import Sidebar from './Admin/Sidebar/Index';
 import { LazyLoad } from './Admin/components/Lazyload';
 import Global from './styles/global';
+import { UserContext } from './Dashboard/Dashboard';
+import ViewCar from './Dashboard/CarComponents.tsx/ViewCar';
 
 
 const Dashboard = React.lazy(() => import("./Dashboard/Dashboard"));
@@ -21,7 +23,9 @@ const Contact = React.lazy(() => import("./Dashboard/Contact/Contact"));
 const About = React.lazy(() => import("./Dashboard/About/About"));
 function App() {
   // const matches = UsemediaQuery("(min-width:200px)");
+  let firstText = 'TreZzoH'
   return (
+    <UserContext.Provider value={firstText}>
     <div className="App">
       <Global/>
       {/* {matches ? */}
@@ -36,13 +40,11 @@ function App() {
          <Route path='/view' element={<View/>}/>
          <Route path='/home' element={<Home/>}/>
          <Route path='/edit/:id' element={<Edit/>}/>
-         {/* <Route path='/admin' element={<Suspense fallback={<LazyLoad />}> */}
-              {/* <Navbar/> */}
-            {/* </Suspense>}/> */}
-         {/* <Route path='/sidebar' element={<Sidebar/>}/> */}
+     
          <Route path='/car' element={<Suspense fallback={<LazyLoad />}>
               <Car/>
             </Suspense>}/>
+            <Route path='viewcar' element={<ViewCar/>}/>
          <Route path='/contact' element={<Suspense fallback={<LazyLoad />}>
               <Contact/>
             </Suspense>}/>
@@ -55,6 +57,7 @@ function App() {
        </Routes>
 {/* :"hello"} */}
     </div>
+    </UserContext.Provider>
   );
 }
 

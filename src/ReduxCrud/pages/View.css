@@ -6,12 +6,12 @@
 .Now{
     width: 35vw;
 }
-#form{
+.form{
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    margin-top: 40px;
+    margin-top: 70px;
 
 }
 .reg{
@@ -26,4 +26,7 @@
     color: white;
     margin-left: 150px;
     margin-top: 40px;
+}
+#bookform{
+    margin-top: 100px;
 }

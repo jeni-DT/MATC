@@ -4,3 +4,4 @@
  export const GET_UPDATE_USERS = "GET_UPDATE_USERS"
 export const UPDATE_USERS= "UPDATE_USERS";
 export const POST_USERS="POST_USERS";
+export const GET_CARS="GET_CARS";

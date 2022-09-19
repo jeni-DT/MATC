@@ -61,7 +61,7 @@ const View = () => {
       }}
     >
       {formik => (
-        <div>
+        <div id='bookform'>
           <h1 className='form'>Booking Form</h1>
          
           <Form>
@@ -102,19 +102,20 @@ const View = () => {
             <br />
            
 
-<div className="mb-2">
+<div className="mb-5">
     
-         <button className="btn btn-warning mt-1" type="submit" id='reg'>Book Now</button>
-            <button className="btn btn-danger mt-3 ml-10" type="reset" id='reset'>Reset</button>
+         <button className="btn btn-warning mt-4" type="submit" id='reg'>Book Now</button>
+            <button className="btn btn-danger mt-4 ml-10" type="reset" id='reset'>Reset</button>
       </div>
      
           </Row>
         </Form>
            
-            
+          
 
   
     </div>
+    
   )
 }
     </Formik >

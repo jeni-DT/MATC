@@ -1,21 +1,31 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import './About.css';
 import * as IconName from "react-icons/md";
+import { UserContext } from '../Dashboard';
+import { color } from '@mui/system';
+
 
 const About = () => {
   const paraRef = useRef<null | HTMLParagraphElement>(null)
-  const handleClick =()=>{
+  const firstText =useContext(UserContext);  
+  
+  console.log('context',firstText) 
+const handleClick =useCallback(()=>{
             console.log("hello")
             console.log(paraRef.current);
            alert(paraRef.current?.innerHTML);
           
         }
+  ,[])
         
   useEffect(() => {
     console.log("....",paraRef.current?.innerHTML) 
   })
   return (
     <>
+    <div id="about">
+   <h1 className='animate-charcter'  >{firstText}</h1> 
+
     <h1 className='dot'>.</h1>
     <h5 className='mini'>
 Welcome to RreZzoh drop taxi</h5>
@@ -32,11 +42,12 @@ Welcome to RreZzoh drop taxi</h5>
     <br/>
     <p className='information'> TreZzoH taxi is a leading Taxi service provider in Tamil Nadu.  We have different kinds of cars such as hatchback, Sedan, Suvs, XUV, for your local & outstation trips. OM drop taxi is one of the customer-friendly taxi services companies in Tamilnadu to provide the cars A/C, Non A/C. Our drivers are very experienced & professional.</p>
     <br/>
-    <button onClick={handleClick} className="ref" style={{width:"100px"}}>Click me</button>
-    <h3 className='phone'><i><b><IconName.MdPhone/>9025143828</b></i></h3>
+   
+    <p className='phone'><i><b><IconName.MdPhone/>9025143828</b></i> <button onClick={handleClick} className="ref" style={{width:"100px"}}>Click me</button></p>
     </div>
   </div>
   
+</div>
 </div>
     </>
   ) 

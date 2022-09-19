@@ -1,7 +1,7 @@
 import * as types from "./ActionType";
 import axios from "axios";
 import { error } from "console";
-import TokenService from "../../Admin/Interceptor/Service/TokenService";
+
 import usersReducers from "./Reducer";
 interface editValue{
     name ?: string,

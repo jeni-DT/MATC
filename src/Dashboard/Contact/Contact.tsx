@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext, useMemo, useState } from 'react'
 import './Contact.css';
 import * as IconName from "react-icons/md";
 import styled from 'styled-components';
+import { UserContext } from '../Dashboard';
 const Dot=styled.h1`
 margin-left:90px;
 
@@ -71,9 +72,30 @@ text-align: center;
     }
 
 `
+
+const Contactbtn =styled.button`
+border-radius: 12px;
+background-color: black;
+color: white;
+padding: 5px 30px;
+box-shadow: 0px 0px 18px  black;
+outline: none;
+border: none;
+margin-left:120px;
+` 
+
+
 const Contact = () => {
+  const[contact,setContact]=useState<string |null>("");
+  
+  const handleClick=()=>{
+    setContact("+91 9842012345");
+  }
+  
+  const firstText =useContext(UserContext);  
   return (
-    <Back >
+    <Back id= 'contact'>
+      {/* <h1 style={{background:"yellow",textAlign:"center",padding:"30px"}}>{firstText}</h1>  */}
     <div className="container">
   
   <div className="row">
@@ -81,10 +103,16 @@ const Contact = () => {
         <Dot>.</Dot>
         <Con>Make a call or fill form</Con>
         <Make>Just make a call and book us easily!</Make>
-        <h3 className='phone'><i><b><IconName.MdPhone/>9025143828</b></i></h3>
+        
     </div>
     <div className="col-4">
-    <Conbtn href="/main" className="btn btn-primary d-flex  mx-auto" >Book Now</Conbtn>
+    <Conbtn href="/main" className="btn btn-warning d-flex  mx-auto" >Book Now</Conbtn>
+   <div>
+   <h3 className='phone'><i><b><IconName.MdPhone/>{contact}</b></i></h3>  
+   
+    <Contactbtn onClick={handleClick} >Contact</Contactbtn>
+    </div>
+    
     </div>
   </div>
 </div>

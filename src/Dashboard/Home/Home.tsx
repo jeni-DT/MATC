@@ -12,8 +12,17 @@ text-align: center;
 color: white;
 font-family: Arial, Helvetica, sans-serif;
 font-weight: bold;
-margin-top: 200px;
-font-size: 60px;
+margin-top: 50px;
+font-size: 90px;
+
+@media screen and (max-width:600px){
+  text-align: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin-top: 100px;
+  font-size: 60px;
+  }
 `
 
 const Home = () => {
@@ -24,12 +33,17 @@ const Home = () => {
 
   }
   return (
-    <div className='body'>
+    <div className='body' id='home'>
       <Container>
         <Row>
           <Col md={6}>
-            <Content>Let's Go out with TreZzoH  drop taxi
+            <div className='contant'>
+              <Content>Let's Go out with TreZzoH  
             </Content>
+           
+            </div>
+            <br/>
+            <br/>
 
             {/* <br />
             <div className="mb-2">

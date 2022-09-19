@@ -11,16 +11,18 @@ import {Link } from 'react-router-dom';
 import Car from './Car/Car';
 import Contact from './Contact/Contact';
 
-import { Suspense,lazy, useEffect, useState } from 'react';
+import { Suspense,lazy, useEffect, useState, createContext, useContext } from 'react';
 import About from './About/About';
 import Navbar from '../components/Navbar';
 import Nav from './Nav';
 import createAxios from '../Axios/Index';
 import axios from 'axios';
-// import Navbar from '../Admin/Navbar/Index';
+import context from 'react-bootstrap/esm/AccordionContext';
 
- const Dashboard=()=> {
-  const [first, setFirst] = useState([])
+  export const UserContext =createContext('');
+  const Dashboard=()=> {
+ 
+  const [first, setFirst] = useState<any>([])
   useEffect(() => {
   createAxios
       .get("/auth/employees",)
@@ -29,11 +31,11 @@ import axios from 'axios';
       })
       .catch((err) => console.error(err.message));
   }, []);
+  
   return (
     <>
-    
-  
-    <Nav/>
+     
+     <Nav/>
     
     {/* <Navbar/> */}
     
@@ -45,6 +47,9 @@ import axios from 'axios';
       <footer>
       <Foot/>
       </footer>
+    
+  
+   
      
     </>
     
