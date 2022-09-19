@@ -66,11 +66,11 @@ export const Signup = () => {
         <div>
           <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
           <Form>
-            <TextField label="First Name" name="firstName" type="text"    placHolder="Enter your FirstName" data-testid="firstName"/>
-            <TextField label="last Name" name="lastName" type="text" placHolder="Enter your LastName"data-testId="lastName"/>
-            <TextField label="Email" name="email" placHolder="Enter your Email" type="email" data-testId="email" />
-            <TextField label="password" name="password" type="password" placHolder="Enter your Password" data-testId="password"/>
-            <TextField label="Confirm Password" name="confirmPassword" placHolder="Enter your ConfirmPassword"type="password" data-testId="confirmPassword"/>
+            <TextField label="First Name" name="firstName" type="text"    placeHolder="Enter your FirstName" data-testid="firstName"/>
+            <TextField label="last Name" name="lastName" type="text" placeHolder="Enter your LastName"data-testId="lastName"/>
+            <TextField label="Email" name="email" placeHolder="Enter your Email" type="email" data-testId="email" />
+            <TextField label="password" name="password" type="password" placeHolder="Enter your Password" data-testId="password"/>
+            <TextField label="Confirm Password" name="confirmPassword" placeHolder="Enter your ConfirmPassword"type="password" data-testId="confirmPassword"/>
             <button className="btn btn-dark mt-2" type="submit" id='reg'>Register</button>
             <button className="btn btn-danger mt-3 ml-3" type="reset" id='reset'>Reset</button>
             <p className="mt-3 text-center">

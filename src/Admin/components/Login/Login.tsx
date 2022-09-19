@@ -11,16 +11,16 @@ import createAxios from '../../../Axios/Index';
 
 
 interface items {
-  id:number,
-  email:string,
-  password:string,
-  confirmpassword:string
+  id: number,
+  email: string,
+  password: string,
+  confirmpassword: string
 }
 
 
 export const Login = () => {
   const [error, setError] = useState('');
-  const dispatch = useDispatch();
+
   const navigate = useNavigate();
   const adminData = localStorage.getItem("admin");
   console.log("data=======>", adminData)
@@ -47,13 +47,13 @@ export const Login = () => {
       onSubmit={(data) => {
         if (adminData && adminData.length) {
           const adminvalues = JSON.parse(adminData);
-          
-          const adminLogin = adminvalues.filter((datas:items) => {
+
+          const adminLogin = adminvalues.filter((datas: items) => {
             if (datas.email === data.email && datas.password === data.password) {
               {
 
                 createAxios
-                  .post("/auth/login", { email: data.email,password:data.password })
+                  .post("/auth/login", { email: data.email, password: data.password })
                   .then((response) => {
                     console.log("responsedata", response);
                     if (response?.data?.status === "Success") {
@@ -87,9 +87,9 @@ export const Login = () => {
           <h1 className="my-4 font-weight-bold .display-4" id='loginhead'>Login</h1>
           <Form>
 
-            <TextField label="Email" name="email" type="email" className="label" />
-            <TextField label="password" name="password" type="password" className="label" />
-            <TextField label="Confirm Password" name="confirmPassword" type="password" className="label" />
+            <TextField label="Email" name="email" type="email" className="label" data-testId="email" />
+            <TextField label="password" name="password" type="password"  data-testId="password" className="label" />
+            <TextField label="Confirm Password" name="confirmPassword"  data-testId="confirmPassword" type="password" className="label" />
             <button className="btn btn-dark mt-2" type="submit" id='loginbtn'>Login</button>
 
             <button className="btn btn-danger mt-3 ml-3" type="reset" id='resetbtn'>Reset</button>

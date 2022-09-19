@@ -1,4 +1,3 @@
-
 import { Formik ,Form} from 'formik'
 import React, { useEffect, useState } from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap'
@@ -9,7 +8,7 @@ import '../pages/Edit.css'
 import { useDispatch } from 'react-redux';
 import { updateUser } from '../redux/Actions';
 import { AppDispatch} from "../redux/Store";
-import Dashboard from '../../Dashboard/Dashboard';
+
 
 type datas={
     name ?: string,
@@ -87,23 +86,23 @@ const Edit = () => {
           <Form>
           <Row>
                <Col  className='col-lg-6'>
-               <TextField  name="name" type="text" placeholder=' your name'  className="inbox"/>
-               <TextField  name="phonenumber" type="number" placeholder='Your phone'className="inbox"/>
-               <TextField  name="pickup" type="text" placeholder="pick-up address" className="inbox" />
-               <TextField  name="date" type="date" placeholder="dd/mm/yyyy" className="inbox"/>
+               <TextField  name="name" type="text" placeholder=' your name'  id="inbox" className="form-control"/>
+               <TextField  name="phonenumber" type="number" placeholder='Your phone'id="inbox"className="form-control"/>
+               <TextField  name="pickup" type="text" placeholder="pick-up address" id="inbox"className="form-control" />
+               <TextField  name="date" type="date" placeholder="dd/mm/yyyy" id="inbox"className="form-control"/>
                </Col>
                  <Col className='col-lg-6'>
-                 <TextField  name="email" type="email" placeholder="Email Address" className="inbox"/>
-                 <TextField name="Nopass" type="text" placeholder="No of passengers" className="inbox"/>
-                 <TextField  name="drop" type="text" placeholder="Drop off address" className="inbox" />
-                 <TextField  name="time" type="time" placeholder="Time" className="inbox"/>
+                 <TextField  name="email" type="email" placeholder="Email Address" id="inbox"className="form-control"/>
+                 <TextField name="Nopass" type="text" placeholder="No of passengers" id="inbox"className="form-control"/>
+                 <TextField  name="drop" type="text" placeholder="Drop off address" id="inbox"className="form-control" />
+                 <TextField  name="time" type="time" placeholder="Time" id="inbox"/>
 
                  </Col>
             </Row>
             <br/>
             <button className="btn btn-warning mt-5" type="submit" id='Edit'>Update</button>
             <br></br>
-            <button className="btn btn-danger mt-4 ml-3" type="reset" id='reset'>Reset</button>
+            <button className="btn btn-danger mt-4 ml-3" type="reset" id='Reset'>Reset</button>
             
           </Form>
           </Container>

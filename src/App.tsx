@@ -8,12 +8,12 @@ import './App.css';
 import UsemediaQuery from './usemediaQuery';
 import View from './ReduxCrud/pages/View';
 import Home from './ReduxCrud/pages/Home';
-import Edit from './ReduxCrud/pages/Edit';
-// import Sidebar from './Admin/Sidebar/Index';
+
 import { LazyLoad } from './Admin/components/Lazyload';
 import Global from './styles/global';
 import { UserContext } from './Dashboard/Dashboard';
-import ViewCar from './Dashboard/CarComponents.tsx/ViewCar';
+
+import Edit from './ReduxCrud/pages/Edit';
 
 
 const Dashboard = React.lazy(() => import("./Dashboard/Dashboard"));
@@ -44,7 +44,7 @@ function App() {
          <Route path='/car' element={<Suspense fallback={<LazyLoad />}>
               <Car/>
             </Suspense>}/>
-            <Route path='viewcar' element={<ViewCar/>}/>
+            
          <Route path='/contact' element={<Suspense fallback={<LazyLoad />}>
               <Contact/>
             </Suspense>}/>

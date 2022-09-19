@@ -5,7 +5,7 @@ import { Button, Col, Container, Row, Form as RForm } from 'react-bootstrap'
 import { TextField } from '../../Admin/components/TextField';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import '../pages/View.css'
+import './View.css'
 import { useDispatch } from 'react-redux';
 import { addUsers } from '../redux/Actions';
 import { AppDispatch } from "../redux/Store";

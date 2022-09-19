@@ -1,10 +1,23 @@
-.inbox{
-    width: 15vw;
+/* #inbox{
+    width: 25vw;
     background-color: white;
     border-radius: 8px;
     height: 6vh;
+    margin-left: 80px;
+    text-align: center;
     
 }
+@media only screen and (max-width: 600px) {
+    #inbox{
+        width: 60vw;
+    background-color: white;
+    border-radius: 6px;
+    height: 7vh;
+    margin-left: 50px;
+    text-align: center;
+     
+    }
+  } */
 .Now{
     width: 35vw;
 }
@@ -20,5 +33,32 @@
     background-image: url("https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=600");
     background-repeat: no-repeat;
     background-size:cover;
-    height:100vh;
+    /* height:100vh; */
 }
+#Edit{
+    width: 1000px;
+    text-align: center;
+   margin-left: 75px;
+
+}
+@media only screen and (max-width: 600px) {
+    #Edit{
+        width: 200px;
+        text-align: center;
+       margin-left: 50px;
+    
+    }
+  }
+#Reset{
+    width: 1000px;
+    text-align: center;
+    margin-left: 75px;
+}
+@media only screen and (max-width: 600px) {
+    #Reset{
+        width: 200px;
+        text-align: center;
+       margin-left: 50px;
+    
+    }
+  }

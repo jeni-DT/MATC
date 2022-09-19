@@ -67,40 +67,38 @@
       "id": 6
     }
   ],
-  "cars":[
-    { "id":"1",
-      "src":"https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/2.png",
-      "Title":"Suzuki Dzire",
-      "info1":"One-way trip rate/km----Rs.13/Km",
-      "info2":"Round trip rate/km----Rs.11/Km",
-      "info3":"Passengers---- 4 persons"
-
-  },
-  { "id":"2",
-  "src":"https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/Edi.png",
-  "Title":"Toyota Etios",
-  "info1":"One-way trip rate/km----Rs.14/Km",
-  "info2":"Round trip rate/km----Rs.12/Km",
-  "info3":"Passengers----4 persons"
-
-},
-{ "id":"3",
-"src":"https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/1.png",
-"Title":"Mahendra Xylo",
-"info1":"One-way trip rate/km----Rs.18/Km",
-"info2":"Round trip rate/km----Rs.16/Km",
-"info3":"Passengers----6 persons"
-
-},
-{ "id":"4",
-"src":"https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/innova.png",
-"Title":"Toyota Innova",
-"info1":"One-way trip rate/km----Rs.20/Km",
-"info2":"Round trip rate/km----Rs.18/Km",
-"info3":"Passengers----8 persons"
-
-}
-  
-  
-]
+  "cars": [
+    {
+      "id": "1",
+      "src": "https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/2.png",
+      "Title": "Suzuki Dzire",
+      "info1": "One-way trip rate/km----Rs.13/Km",
+      "info2": "Round trip rate/km----Rs.11/Km",
+      "info3": "Passengers---- 4 persons"
+    },
+    {
+      "id": "2",
+      "src": "https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/Edi.png",
+      "Title": "Toyota Etios",
+      "info1": "One-way trip rate/km----Rs.14/Km",
+      "info2": "Round trip rate/km----Rs.12/Km",
+      "info3": "Passengers----4 persons"
+    },
+    {
+      "id": "3",
+      "src": "https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/1.png",
+      "Title": "Mahendra Xylo",
+      "info1": "One-way trip rate/km----Rs.18/Km",
+      "info2": "Round trip rate/km----Rs.16/Km",
+      "info3": "Passengers----6 persons"
+    },
+    {
+      "id": "4",
+      "src": "https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/innova.png",
+      "Title": "Toyota Innova",
+      "info1": "One-way trip rate/km----Rs.20/Km",
+      "info2": "Round trip rate/km----Rs.18/Km",
+      "info3": "Passengers----8 persons"
+    }
+  ]
 }

@@ -2,7 +2,7 @@ import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import './About.css';
 import * as IconName from "react-icons/md";
 import { UserContext } from '../Dashboard';
-import { color } from '@mui/system';
+
 
 
 const About = () => {
