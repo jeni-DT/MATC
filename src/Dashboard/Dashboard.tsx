@@ -1,18 +1,14 @@
+import React, { useEffect, useState, createContext } from 'react';
 import './Dashboard.css';
 import Foot from './Footer';
 import Home from './Home/Home';
 import Car from './Car/Car';
 import Contact from './Contact/Contact';
-import { useEffect, useState, createContext} from 'react';
 import About from './About/About';
 import Nav from './Nav';
 import createAxios from '../Axios/Index';
-
-
-
 export const UserContext = createContext('');
 const Dashboard = () => {
-
   const [first, setFirst] = useState<any>([])
   useEffect(() => {
     createAxios
@@ -25,8 +21,7 @@ const Dashboard = () => {
   }, []);
 
   return (
-    <>
-
+    <div>
       <Nav />
       <Home />
       <Car />
@@ -36,12 +31,7 @@ const Dashboard = () => {
       <footer>
         <Foot />
       </footer>
-
-
-
-
-    </>
-
+    </div>
   );
 }
 

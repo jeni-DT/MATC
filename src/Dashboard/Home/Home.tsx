@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import './Home.css'
 
 
-const Content =styled.p`
+const Content = styled.p`
 text-align: center;
 color: white;
 font-family: Arial, Helvetica, sans-serif;
@@ -38,12 +38,12 @@ const Home = () => {
         <Row>
           <Col md={6}>
             <div className='contant'>
-              <Content>Let's Go out with TreZzoH  
-            </Content>
-           
+              <Content>Let's Go out with TreZzoH
+              </Content>
+
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
 
             {/* <br />
             <div className="mb-2">
@@ -52,12 +52,12 @@ const Home = () => {
             </div> */}
           </Col>
           <Col md={6}>
-            <View/>
+            <View />
           </Col>
         </Row>
       </Container>
     </div>
-    
+
   )
 }
 

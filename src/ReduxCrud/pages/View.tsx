@@ -1,17 +1,16 @@
-
+import React from 'react';
 import { Formik, Form } from 'formik'
-import {Col,Row, Form as RForm } from 'react-bootstrap'
+import { Col, Row, Form as RForm } from 'react-bootstrap'
 import { TextField } from '../../Admin/components/TextField';
 import * as Yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import './View.css'
-
 import { addUsers } from '../redux/Actions';
 import { AppDispatch } from "../redux/Store";
 import { useDispatch } from 'react-redux';
 const View = () => {
   const navigate = useNavigate();
-  const dispatch = useDispatch <AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>();
 
   const validate = Yup.object({
     name: Yup.string()
@@ -63,63 +62,63 @@ const View = () => {
       {formik => (
         <div id='bookform'>
           <h1 className='form'>Booking Form</h1>
-         
+
           <Form>
             <Row className="mb-3">
-            <Col  className='col-lg-6'>
-              <RForm.Group  controlId="validationCustom01">
+              <Col className='col-lg-6'>
+                <RForm.Group controlId="validationCustom01">
 
 
-                <TextField name="name" type="text" placeholder='your name' className="form-control" data-testId="name" />
-              </RForm.Group>
-              <RForm.Group  controlId="validationCustom01">
-                <TextField name="phonenumber" type="number" placeholder='Your phone' className="form-control" data-testId="phonenumber" />
-              </RForm.Group>
-             
-            
-              <RForm.Group  controlId="validationCustom01">
-                <TextField name="pickup" type="text" placeholder="pick-up address" className="form-control" data-testId="pickup" />
-              </RForm.Group>
-              <RForm.Group  controlId="validationCustom01">
-              <TextField name="date" type="date" placeholder="dd/mm/yyyy" className="form-control" data-testId="date" />
-            </RForm.Group>
-            </Col>
-            <Col  className='col-lg-6'>
+                  <TextField name="name" type="text" placeholder='your name' className="form-control" data-testId="name" />
+                </RForm.Group>
+                <RForm.Group controlId="validationCustom01">
+                  <TextField name="phonenumber" type="number" placeholder='Your phone' className="form-control" data-testId="phonenumber" />
+                </RForm.Group>
 
-            
-            <RForm.Group  controlId="validationCustom01">
-            
-              <TextField name="email" type="email" placeholder="Email Address" className="form-control"  data-testId="email"/></RForm.Group>
-              <RForm.Group  controlId="validationCustom01">
-             
-              <TextField name="Nopass" type="text" placeholder="No of passengers" className="form-control" data-testId="nopass"/></RForm.Group>
-              
-              <RForm.Group  controlId="validationCustom01">
-              <TextField name="drop" type="text" placeholder="Drop off address" className="form-control" data-testId="drop" /></RForm.Group>
-              <RForm.Group  controlId="validationCustom01">
-              <TextField name="time" type="time" placeholder="Time" className="form-control" data-testId="time"/></RForm.Group>
+
+                <RForm.Group controlId="validationCustom01">
+                  <TextField name="pickup" type="text" placeholder="pick-up address" className="form-control" data-testId="pickup" />
+                </RForm.Group>
+                <RForm.Group controlId="validationCustom01">
+                  <TextField name="date" type="date" placeholder="dd/mm/yyyy" className="form-control" data-testId="date" />
+                </RForm.Group>
               </Col>
-            <br />
-           
+              <Col className='col-lg-6'>
 
-<div className="mb-5">
-    
-         <button className="btn btn-warning mt-4" type="submit" id='reg'>Book Now</button>
-            <button className="btn btn-danger mt-4 ml-10" type="reset" id='reset'>Reset</button>
-      </div>
-     
-          </Row>
-        </Form>
-           
-          
 
-  
-    </div>
-    
-  )
-}
+                <RForm.Group controlId="validationCustom01">
+
+                  <TextField name="email" type="email" placeholder="Email Address" className="form-control" data-testId="email" /></RForm.Group>
+                <RForm.Group controlId="validationCustom01">
+
+                  <TextField name="Nopass" type="text" placeholder="No of passengers" className="form-control" data-testId="nopass" /></RForm.Group>
+
+                <RForm.Group controlId="validationCustom01">
+                  <TextField name="drop" type="text" placeholder="Drop off address" className="form-control" data-testId="drop" /></RForm.Group>
+                <RForm.Group controlId="validationCustom01">
+                  <TextField name="time" type="time" placeholder="Time" className="form-control" data-testId="time" /></RForm.Group>
+              </Col>
+              <br />
+
+
+              <div className="mb-5">
+
+                <button className="btn btn-warning mt-4" type="submit" id='reg'>Book Now</button>
+                <button className="btn btn-danger mt-4 ml-10" type="reset" id='reset'>Reset</button>
+              </div>
+
+            </Row>
+          </Form>
+
+
+
+
+        </div>
+
+      )
+      }
     </Formik >
-    
+
   )
 }
 

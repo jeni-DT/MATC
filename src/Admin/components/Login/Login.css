@@ -1,28 +1,32 @@
-#loginimg{
+#loginimg {
     height: 9vh;
     margin-top: 40px;
-    
+
 }
-.label{
-    margin-left:60px ;
+
+.label {
+    margin-left: 60px;
     width: 23vw;
     border-radius: 4px;
     height: 35px;
 }
-#loginbtn{
-  
+
+#loginbtn {
+
     margin-left: 70px;
     width: 10vw;
     border-radius: 14px;
     height: 8vh;
 }
-#resetbtn{
+
+#resetbtn {
     margin-left: 40px;
     width: 10vw;
     border-radius: 14px;
     height: 8vh;
 }
-#loginhead{
+
+#loginhead {
     text-align: center;
     margin-top: 20px;
 }

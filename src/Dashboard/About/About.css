@@ -1,70 +1,74 @@
+.dot {
+  text-align: center;
+  color: yellow;
+  margin-top: 60px;
+}
 
-.dot{
-    text-align: center;
-    color: yellow;
-    margin-top: 60px;
+.mini {
+  text-align: center;
+  color: rgb(70, 67, 67);
 }
-.mini{
-    text-align: center;
-    color: rgb(70, 67, 67);
+
+.slogo {
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 60px;
 }
-.slogo{
+
+@media only screen and (max-width: 600px) {
+  .slogo {
     text-align: center;
     color: black;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-    font-size: 60px;
-}
-@media only screen and (max-width: 600px) {
-    .slogo{
-        text-align: center;
-        color: black;
-        font-family:Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 40px;
-    }
-  }
-.about{
-    font-weight: bold;
-    text-align: center;
-    color: black;
-    margin-top: 100px;
-    font-size: 20px;
-
-}
-.information{
-    margin-top: 60px;
-    color: rgb(119, 118, 118);
-    text-align: center;
-}
-.ref{
-    text-align: center;
-    background-color: yellow;
-    border-radius: 50px;
-    margin-left: 180px;
-}
-@media only screen and (max-width: 600px) {
-    .ref{
-       text-align: center;
-       
-      
-    }
-  }
-.con{
-    text-align: center;
     font-size: 40px;
+  }
 }
 
-.animate-charcter
-{
-   
-  background-image: linear-gradient(
-    -225deg,
-    #face0b 0%,
-    #070706 29%,
-    #ffbd09 67%,
-    #dd0808 100%
-  );
+.about {
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin-top: 100px;
+  font-size: 20px;
+
+}
+
+.information {
+  margin-top: 60px;
+  color: rgb(119, 118, 118);
+  text-align: center;
+}
+
+.ref {
+  text-align: center;
+  background-color: yellow;
+  border-radius: 50px;
+  margin-left: 180px;
+}
+
+@media only screen and (max-width: 600px) {
+  .ref {
+    text-align: center;
+
+
+  }
+}
+
+.con {
+  text-align: center;
+  font-size: 40px;
+}
+
+.animate-charcter {
+
+  background-image: linear-gradient(-225deg,
+      #face0b 0%,
+      #070706 29%,
+      #ffbd09 67%,
+      #dd0808 100%);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 300% auto;
@@ -75,9 +79,9 @@
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 100px;
-      text-align: center;
-      margin-left: 35%;
+  font-size: 100px;
+  text-align: center;
+  margin-left: 35%;
 }
 
 @keyframes textclip {

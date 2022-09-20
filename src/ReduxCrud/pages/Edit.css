@@ -18,10 +18,11 @@
      
     }
   } */
-.Now{
+.Now {
     width: 35vw;
 }
-.form{
+
+.form {
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,36 +30,40 @@
     margin-top: 40px
 }
 
-.edit{
+.edit {
     background-image: url("https://images.pexels.com/photos/315191/pexels-photo-315191.jpeg?auto=compress&cs=tinysrgb&w=600");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     /* height:100vh; */
 }
-#Edit{
+
+#Edit {
     width: 1000px;
     text-align: center;
-   margin-left: 75px;
+    margin-left: 75px;
 
 }
+
 @media only screen and (max-width: 600px) {
-    #Edit{
+    #Edit {
         width: 200px;
         text-align: center;
-       margin-left: 50px;
-    
+        margin-left: 50px;
+
     }
-  }
-#Reset{
+}
+
+#Reset {
     width: 1000px;
     text-align: center;
     margin-left: 75px;
 }
+
 @media only screen and (max-width: 600px) {
-    #Reset{
+    #Reset {
         width: 200px;
         text-align: center;
-       margin-left: 50px;
-    
+        margin-left: 50px;
+
     }
-  }
+}

@@ -12,8 +12,8 @@ import createAxios from '../../../Axios/Index';
 
 
 export const Signup = () => {
- 
-  const navigate= useNavigate();
+
+  const navigate = useNavigate();
   const validate = Yup.object({
     firstName: Yup.string()
       .max(15, 'Must be 15 characters or less')
@@ -45,37 +45,37 @@ export const Signup = () => {
         // localStorage.setItem("admin",JSON.stringify([values]));
         // navigate('/login');
         const admin = localStorage.getItem("admin");
-        console.log("values",values)
+        console.log("values", values)
         localStorage.setItem("admin", JSON.stringify([values]));
-        const {firstName,lastName,email,password,confirmPassword} = values;
+        const { firstName, lastName, email, password, confirmPassword } = values;
         createAxios
-        .post("/auth/signup", { email, password})
-        .then((responce) => {
-          if (responce.status === 201) {
-            navigate("/login");
-          } else {
-            alert("Failed To register User");
-          }
-        })
-        .catch((error) => console.error(error.message));
+          .post("/auth/signup", { email, password })
+          .then((responce) => {
+            if (responce.status === 201) {
+              navigate("/login");
+            } else {
+              alert("Failed To register User");
+            }
+          })
+          .catch((error) => console.error(error.message));
         navigate("/login");
-        
+
       }}
     >
       {formik => (
         <div>
           <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
           <Form>
-            <TextField label="First Name" name="firstName" type="text"    placeHolder="Enter your FirstName" data-testid="firstName"/>
-            <TextField label="last Name" name="lastName" type="text" placeHolder="Enter your LastName"data-testId="lastName"/>
+            <TextField label="First Name" name="firstName" type="text" placeHolder="Enter your FirstName" data-testid="firstName" />
+            <TextField label="last Name" name="lastName" type="text" placeHolder="Enter your LastName" data-testId="lastName" />
             <TextField label="Email" name="email" placeHolder="Enter your Email" type="email" data-testId="email" />
-            <TextField label="password" name="password" type="password" placeHolder="Enter your Password" data-testId="password"/>
-            <TextField label="Confirm Password" name="confirmPassword" placeHolder="Enter your ConfirmPassword"type="password" data-testId="confirmPassword"/>
+            <TextField label="password" name="password" type="password" placeHolder="Enter your Password" data-testId="password" />
+            <TextField label="Confirm Password" name="confirmPassword" placeHolder="Enter your ConfirmPassword" type="password" data-testId="confirmPassword" />
             <button className="btn btn-dark mt-2" type="submit" id='reg'>Register</button>
             <button className="btn btn-danger mt-3 ml-3" type="reset" id='reset'>Reset</button>
             <p className="mt-3 text-center">
-                Admin SignUp <Link to="/login">SignIn here..</Link>
-              </p>
+              Admin SignUp <Link to="/login">SignIn here..</Link>
+            </p>
           </Form>
         </div>
       )}

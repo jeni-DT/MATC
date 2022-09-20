@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"
-import { BrowserRouter as Router} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Login } from "./Login"
 
 
@@ -18,26 +18,26 @@ describe("Login Form", () => {
         expect(password).toBeInTheDocument();
         expect(confirmPassword).toBeInTheDocument();
     });
-    it("Button",async()=>{
-        render(<Router><Login/></Router>)
-        const loginbtn= await screen.findAllByRole("button");
+    it("Button", async () => {
+        render(<Router><Login /></Router>)
+        const loginbtn = await screen.findAllByRole("button");
         expect(loginbtn).toHaveLength(2);
     });
-    it ("placeHolder ",async()=>{	
+    it("placeHolder ", async () => {
         render(
-        <Router><Login/></Router>
+            <Router><Login /></Router>
         )
-        
-        
-        const email= screen.getByPlaceholderText("Enter your Email");
-        const password= screen.getByPlaceholderText("Enter your Password");
-        const confirmPassword= screen.getByPlaceholderText("Enter your ConfirmPasword");
-        
-    
-        expect(email).toHaveAttribute("type","email");
-        expect(password).toHaveAttribute("type","password");
-        expect(confirmPassword).toHaveAttribute("type","password");
-        
-        })
+
+
+        const email = screen.getByPlaceholderText("Enter your Email");
+        const password = screen.getByPlaceholderText("Enter your Password");
+        const confirmPassword = screen.getByPlaceholderText("Enter your ConfirmPasword");
+
+
+        expect(email).toHaveAttribute("type", "email");
+        expect(password).toHaveAttribute("type", "password");
+        expect(confirmPassword).toHaveAttribute("type", "password");
+
+    })
 
 })

@@ -3,10 +3,11 @@
    
     
 } */
-.Now{
+.Now {
     width: 35vw;
 }
-.form{
+
+.form {
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
@@ -14,19 +15,22 @@
     margin-top: 70px;
 
 }
-.reg{
+
+.reg {
     text-align: center;
     color: black;
     margin-top: 40px;
     margin-left: 100px;
-    
+
 }
-.reset{
+
+.reset {
     text-align: center;
     color: white;
     margin-left: 150px;
     margin-top: 40px;
 }
-#bookform{
+
+#bookform {
     margin-top: 100px;
 }
