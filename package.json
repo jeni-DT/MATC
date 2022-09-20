@@ -45,12 +45,6 @@
     "eject": "react-scripts eject",
     "server": "json-server --watch db.json --port 7000"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -66,6 +60,16 @@
   "devDependencies": {
     "@types/react-scroll": "^1.8.4",
     "@types/styled-components": "^5.1.26",
-    "jest-watch-typeahead": "^0.6.5"
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "jest-watch-typeahead": "^0.6.5",
+    "prettier": "^2.7.1",
+    "lint": "eslint .",
+"lint:fix": "eslint --fix",
+"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   }
 }

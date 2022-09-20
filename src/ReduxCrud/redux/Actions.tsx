@@ -1,20 +1,18 @@
 import * as types from "./ActionType";
 import axios from "axios";
-import { error } from "console";
-
-import usersReducers from "./Reducer";
+import { AppDispatch } from "./Store";
 interface editValue{
     name ?: string,
     email?: string,
-    phonenumber :number,
-    Nopass :number,
+    phonenumber ?:number,
+    Nopass ?:number,
     pickup ?:string,
     drop ?:string,
     date ?:string,
     time?:string,
     id?:number,
 }
-const getUsers=(users:any)=>({
+const getUsers=(users:editValue)=>({
     type:types.GET_USERS,
     payload:users,
 
@@ -24,11 +22,11 @@ const postUsers=(users:any)=>({
   
 
 })
-const postLogin=(users:any)=>({
-    type:types.POST_USERS,
+// const postLogin=(users:any)=>({
+//     type:types.POST_USERS,
   
 
-})
+// })
 const userDeleted=()=>({
     type:types.DELETE_USER,
     
@@ -36,13 +34,13 @@ const userDeleted=()=>({
 const updateDetails=()=>({
     type:types.UPDATE_USERS,
 })
-const getDetails=(users:any)=>({
+const getDetails=(users:editValue)=>({
     type:types.GET_UPDATE_USERS,
     payload:users,
 
 })
  export  const loadUsers =()=>{
-    return function (dispatch:any){
+    return function (dispatch:AppDispatch){
         axios.get (`${process.env.REACT_APP_API}`)
         .then((resp)=>{
             console.log("response:",resp);
@@ -52,7 +50,7 @@ const getDetails=(users:any)=>({
     }
  }
  export  const addUsers =(values:any)=>{
-    return function (dispatch:any){
+    return function (dispatch:AppDispatch){
         axios.post (`${process.env.REACT_APP_API}`,values)
         .then((resp)=>{
             console.log("response:",resp);
@@ -62,7 +60,7 @@ const getDetails=(users:any)=>({
     }
  }
  export  const deleteUser =(id:number)=>{
-    return function (dispatch:any){
+    return function (dispatch:AppDispatch){
         axios.delete (`${process.env.REACT_APP_API}/${id}`)
         .then((resp)=>{
             console.log("response:",resp);
@@ -72,9 +70,9 @@ const getDetails=(users:any)=>({
         .catch((error)=>console.log(error))
     }
  }
- export  const updateUser =(details:any,id:number)=>{
+ export  const updateUser =(details:editValue,id:number)=>{
     console.log("details",details)
-    return function (dispatch:any){
+    return function (dispatch:AppDispatch){
         axios.put (`${process.env.REACT_APP_API}/${id}`,details)
         .then((resp)=>{
             console.log("response:",resp);
@@ -86,7 +84,7 @@ const getDetails=(users:any)=>({
  }
  export  const getuserValue =(updatevalue:editValue)=>{
     console.log(updatevalue);
-    return function (dispatch:any){
+    return function (dispatch:AppDispatch){
         axios.put (`${process.env.REACT_APP_API}/${updatevalue.id}`,updatevalue)
         .then((resp)=>{
             console.log("response:",resp);
@@ -96,13 +94,4 @@ const getDetails=(users:any)=>({
         .catch((error)=>console.log(error))
     }
  }
-//  export const getBooking =()=>{
-//     return function (dispatch:any){
-//         axios.get (" http://localhost:5000/")
-//         .then((resp)=>{
-            
-            
-//         })
-//         .catch((error)=>console.log(error))
-//     } 
-//  }
+

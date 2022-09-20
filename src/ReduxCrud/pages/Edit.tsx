@@ -1,29 +1,19 @@
 import { Formik ,Form} from 'formik'
-import React, { useEffect, useState } from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { TextField } from '../../Admin/components/TextField';
 import * as Yup from 'yup';
 import { useLocation, useNavigate } from 'react-router-dom';
 import '../pages/Edit.css'
-import { useDispatch } from 'react-redux';
+
 import { updateUser } from '../redux/Actions';
 import { AppDispatch} from "../redux/Store";
+import { useDispatch } from 'react-redux';
 
 
-type datas={
-    name ?: string,
-    email?: string,
-    phonenumber :number,
-    Nopass :number,
-    pickup ?:string,
-    drop ?:string,
-    date ?:string,
-    time?:string,
-    id?:number,
-}
+
 const Edit = () => {
     const navigate= useNavigate();
-    const dispatch =useDispatch<AppDispatch>();
+    const dispatch = useDispatch <AppDispatch>();
     const location:any =useLocation();
     const value=location.state;
     console.log("location:",value)
@@ -86,16 +76,16 @@ const Edit = () => {
           <Form>
           <Row>
                <Col  className='col-lg-6'>
-               <TextField  name="name" type="text" placeholder=' your name'  id="inbox" className="form-control"/>
-               <TextField  name="phonenumber" type="number" placeholder='Your phone'id="inbox"className="form-control"/>
-               <TextField  name="pickup" type="text" placeholder="pick-up address" id="inbox"className="form-control" />
-               <TextField  name="date" type="date" placeholder="dd/mm/yyyy" id="inbox"className="form-control"/>
+               <TextField  name="name" type="text" placeholder='Ender your name'  id="inbox" className="form-control" data-testId="name"/>
+               <TextField  name="phonenumber" type="number" placeholder='Your phone'id="inbox"className="form-control" data-testId="phonenumber"/>
+               <TextField  name="pickup" type="text" placeholder="pick-up address" id="inbox"className="form-control" data-testId="pickup"/>
+               <TextField  name="date" type="date" placeholder="dd/mm/yyyy" id="inbox"className="form-control" data-testId="date"/>
                </Col>
                  <Col className='col-lg-6'>
-                 <TextField  name="email" type="email" placeholder="Email Address" id="inbox"className="form-control"/>
-                 <TextField name="Nopass" type="text" placeholder="No of passengers" id="inbox"className="form-control"/>
-                 <TextField  name="drop" type="text" placeholder="Drop off address" id="inbox"className="form-control" />
-                 <TextField  name="time" type="time" placeholder="Time" id="inbox"/>
+                 <TextField  name="email" type="email" placeholder="Email Address" id="inbox"className="form-control" data-testId="email"/>
+                 <TextField name="Nopass" type="text" placeholder="No of passengers" id="inbox"className="form-control" data-testId="nopass"/>
+                 <TextField  name="drop" type="text" placeholder="Drop off address" id="inbox"className="form-control" data-testId="drop"/>
+                 <TextField  name="time" type="time" placeholder="Time" id="inbox" data-testId="time"/>
 
                  </Col>
             </Row>

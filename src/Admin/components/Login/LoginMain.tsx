@@ -2,7 +2,6 @@ import React from 'react'
 import { Login } from './Login';
 import LoginImg from '/home/dt/Documents/MATC/my-app/src/Admin/assets/Login.jpg';
 import './Login.css'
-import Foot from '../../../Dashboard/Footer';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,15 +17,7 @@ const LoginMain = () => {
           <Nav className="header">
           <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/menu">SignUp</Nav.Link>
-            {/* <NavDropdown title="Admin" className='admin' id="basic-nav-dropdown">
-              <NavDropdown.Item href="/main">SignUp</NavDropdown.Item>
-              <NavDropdown.Item href="/login">
-                Login
-              </NavDropdown.Item>
-              
-              <NavDropdown.Divider />
-             
-            </NavDropdown> */}
+            
           </Nav>
 
         </Container >
