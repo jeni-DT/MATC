@@ -10,6 +10,14 @@
     border-radius: 4px;
     height: 35px;
 }
+@media only screen and (max-width: 600px) {
+    .label {
+        /* margin-left: 100px; */
+        width: 70vw;
+        border-radius: 4px;
+        height: 35px;
+    }
+}
 
 #loginbtn {
 
@@ -18,12 +26,30 @@
     border-radius: 14px;
     height: 8vh;
 }
+@media only screen and (max-width: 600px) {
+    #loginbtn {
+
+        margin-left: 40px;
+        width: 60vw;
+        border-radius: 14px;
+        height: 8vh;
+    }
+}
+
 
 #resetbtn {
     margin-left: 40px;
     width: 10vw;
     border-radius: 14px;
     height: 8vh;
+}
+@media only screen and (max-width: 600px) {
+    #resetbtn {
+        /* margin-left: 40px; */
+        width: 60vw;
+        border-radius: 14px;
+        height: 8vh;
+    }
 }
 
 #loginhead {

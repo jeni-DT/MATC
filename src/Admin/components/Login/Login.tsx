@@ -46,6 +46,7 @@ export const Login = () => {
           const adminvalues = JSON.parse(adminData);
 
           const adminLogin = adminvalues.filter((datas: items) => {
+            console.log("admin login",adminLogin)
             if (datas.email === data.email && datas.password === data.password) {
               {
 
@@ -79,15 +80,15 @@ export const Login = () => {
 
 
     >
-      {formik => (
+      {/* {formik => ( */}
         <div>
           <h1 className="my-4 font-weight-bold .display-4" id='loginhead'>Login</h1>
           <Form>
 
-            <TextField label="Email" name="email" type="email" className="label"
-              placeHolder="Enter your Email" data-testId="email" />
-            <TextField label="password" name="password" type="password" data-testId="password" className="label" placeHolder="Enter your Password" />
-            <TextField label="Confirm Password" name="confirmPassword" data-testId="confirmPassword" type="password" className="label" placeHolder="Enter your ConfirmPasword" />
+            <TextField label="Email" name="email" type="email"className="form-control"
+              placeholder="Enter your Email" data-testId="email" />
+            <TextField label="password" name="password" type="password" data-testId="password" className="form-control" placeholder="Enter your Password" />
+            <TextField label="Confirm Password" name="confirmPassword" data-testId="confirmPassword" type="password" className="form-control" placeholder="Enter your ConfirmPasword" />
             <button className="btn btn-dark mt-2" type="submit" id='loginbtn'>Login</button>
 
             <button className="btn btn-danger mt-3 ml-3" type="reset" id='resetbtn'>Reset</button>
@@ -95,7 +96,7 @@ export const Login = () => {
 
         </div>
 
-      )}
+      {/* )} */}
 
     </Formik>
 

@@ -42,6 +42,7 @@ navigate('/main')
   return (
     <>
    <div id='available'>
+    
     <h1 className='taxi'>TreZzoH</h1>
     <Likes>Likes :{count}</Likes>
     <Like> <button type="button" className="btn btn-info" onClick={handleClick}> 

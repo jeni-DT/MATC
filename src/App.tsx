@@ -14,6 +14,7 @@ import Global from './styles/global';
 import { UserContext } from './Dashboard/Dashboard';
 
 import Edit from './ReduxCrud/pages/Edit';
+import Emp from './Employees/Emp';
 
 
 const Dashboard = React.lazy(() => import("./Dashboard/Dashboard"));
@@ -23,7 +24,7 @@ const Contact = React.lazy(() => import("./Dashboard/Contact/Contact"));
 const About = React.lazy(() => import("./Dashboard/About/About"));
 function App() {
   // const matches = UsemediaQuery("(min-width:200px)");
-  let firstText = 'TreZzoH'
+  const firstText = 'TreZzoH'
   return (
     <UserContext.Provider value={firstText}>
     <div className="App">
@@ -52,8 +53,7 @@ function App() {
               <About/>
             </Suspense>}/>
             
-         
-        
+         <Route path='/emp' element={<Emp/>}></Route>
        </Routes>
 {/* :"hello"} */}
     </div>

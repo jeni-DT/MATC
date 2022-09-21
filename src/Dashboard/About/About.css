@@ -89,3 +89,14 @@
     background-position: 200% center;
   }
 }
+.demo{
+  color: white; 
+  font-family: "arial";
+  font-size: 5em;
+  
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+   background-color: black;
+
+}

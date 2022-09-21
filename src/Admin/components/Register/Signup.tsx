@@ -4,7 +4,6 @@ import "./Signup.css";
 import * as Yup from 'yup';
 import { Link, useNavigate } from 'react-router-dom';
 import { TextField } from '../TextField';
-import Main from './Main';
 import createAxios from '../../../Axios/Index';
 
 
@@ -47,7 +46,7 @@ export const Signup = () => {
         const admin = localStorage.getItem("admin");
         console.log("values", values)
         localStorage.setItem("admin", JSON.stringify([values]));
-        const { firstName, lastName, email, password, confirmPassword } = values;
+        const {email, password } = values;
         createAxios
           .post("/auth/signup", { email, password })
           .then((responce) => {
@@ -74,7 +73,7 @@ export const Signup = () => {
             <button className="btn btn-dark mt-2" type="submit" id='reg'>Register</button>
             <button className="btn btn-danger mt-3 ml-3" type="reset" id='reset'>Reset</button>
             <p className="mt-3 text-center">
-              Admin SignUp <Link to="/login">SignIn here..</Link>
+               <Link to="/login">SignIn here..</Link>
             </p>
           </Form>
         </div>

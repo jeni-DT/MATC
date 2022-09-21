@@ -16,7 +16,7 @@ const LoginMain = () => {
           <Navbar.Brand href="/" className='head'>TreZZoH</Navbar.Brand>
           <Nav className="header">
             <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/menu">SignUp</Nav.Link>
+            <Nav.Link href="/main">SignUp</Nav.Link>
 
           </Nav>
 
