@@ -24,6 +24,7 @@ font-size:40px;
 const Back=styled.body`
 background-color: yellow;
 background:cover;
+height:550px;
 
 @media screen and (max-width:600px){
   background:cover;
@@ -95,7 +96,7 @@ const Contact = () => {
   const firstText =useContext(UserContext);  
   return (
     <Back id= 'contact'>
-      {/* <h1 style={{background:"yellow",textAlign:"center",padding:"30px"}}>{firstText}</h1>  */}
+      <h1 style={{background:"yellow",color:"black",textAlign:"center",padding:"30px"}}>{firstText}</h1> 
     <div className="container">
   
   <div className="row">
@@ -106,7 +107,7 @@ const Contact = () => {
         
     </div>
     <div className="col-4">
-    <Conbtn href="/main" className="btn btn-warning d-flex  mx-auto" >Book Now</Conbtn>
+    <Conbtn href="#bookform" className="btn btn-warning d-flex  mx-auto" >Book Now</Conbtn>
    <div>
    <h3 className='phone'><i><b><IconName.MdPhone/>{contact}</b></i></h3>  
    

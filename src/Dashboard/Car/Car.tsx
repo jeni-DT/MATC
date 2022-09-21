@@ -69,6 +69,7 @@ Rs.13/Km</Info>
 Rs.11/Km</Info>
 <Info>Passengers----
 4 persons</Info>
+{/* <a href='#bookform'><button id='btnbook'>Book Taxi</button></a> */}
 <button id='btnbook'onClick={clickOver}>Book Taxi</button>
    
   </div>

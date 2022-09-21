@@ -1,7 +1,7 @@
 .dot {
   text-align: center;
   color: yellow;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 
 .mini {
@@ -93,10 +93,10 @@
   color: white; 
   font-family: "arial";
   font-size: 5em;
-  
-  white-space: nowrap;
-  overflow: hidden;
+  /* height: 5px; */
+  /* white-space: nowrap;
+  overflow: hidden; */
   width: 100%;
    background-color: black;
-
+  
 }

@@ -27,7 +27,7 @@ const About = () => {
       <div id="about">
         <h1 className='animate-charcter'  >{firstText}</h1>
 <div className='demo'>
-  <Demo myQuotes='TreZzoH.......<<<<<<<>>>>>>> Work, Travel, Save, Repeat......>>>>>>>><<<<<<<<<'/>
+  <Demo myQuotes='TreZzoH<<<<<<<>>>>>>> ......Work, Travel, Save, Repeat......<<<<<<<<<<>>>>>>>>>'/>
 </div>
         <h1 className='dot'>.</h1>
         <h5 className='mini'>

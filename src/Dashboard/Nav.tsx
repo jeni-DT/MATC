@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+
 import React from 'react'
 import { Link } from 'react-router-dom';
 
@@ -22,10 +22,8 @@ const Nav = () => {
 
                 <a href='#home' className="nav-link active">home</a>
               </li>
-              {/* <li className="nav-item"> */}
-
               <a href='#available' className="nav-link active">Available</a>
-              {/* </li> */}
+            
 
               <li className="nav-item">
 
@@ -35,6 +33,20 @@ const Nav = () => {
 
                 <a href='#contact' className="nav-link active">Contact</a>
               </li>
+              <li className="nav-item">
+
+<a href='/home' className="nav-link active">Booked</a>
+</li>
+              <div className='signup'>
+              <Link to="/main">
+              <button type="button" className="btn btn-danger">SignUp</button>
+              </Link>
+              </div>
+              <div className='loginnav'>
+                <Link to='/login'>
+                <button type="button" className="btn btn-dark ">Login</button>
+                </Link>
+              </div>
             </ul>
 
           </div>
