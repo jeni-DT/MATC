@@ -14,6 +14,8 @@ import Global from './styles/global';
 import { UserContext } from './Dashboard/Dashboard';
 
 import Edit from './ReduxCrud/pages/Edit';
+import Feedback from './Dashboard/Feedback/Feedback';
+
 
 
 
@@ -28,10 +30,12 @@ function App() {
   return (
     <UserContext.Provider value={firstText}>
       <div className="App">
+       
         <Global />
         {/* {matches ? */}
         <Routes>
-
+        
+        
 
           <Route path="/main" element={<Main />} />
           <Route path='/login' element={<LoginMain />} />
@@ -52,9 +56,10 @@ function App() {
           <Route path='/about' element={<Suspense fallback={<LazyLoad />}>
             <About />
           </Suspense>} />
-
+<Route path='/feedback' element={<Feedback/>}></Route>
 
         </Routes>
+      
         {/* :"hello"} */}
       </div>
     </UserContext.Provider>

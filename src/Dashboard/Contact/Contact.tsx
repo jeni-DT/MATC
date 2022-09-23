@@ -3,6 +3,7 @@ import './Contact.css';
 import * as IconName from "react-icons/md";
 import styled from 'styled-components';
 import { UserContext } from '../Dashboard';
+import {Demo} from 'jeni_aro';
 const Dot=styled.h1`
 margin-left:90px;
 
@@ -104,9 +105,11 @@ const Contact = () => {
         <Dot>.</Dot>
         <Con>Make a call or fill form</Con>
         <Make>Just make a call and book us easily!</Make>
+        <Demo/>
         
     </div>
     <div className="col-4">
+   
     <Conbtn href="#bookform" className="btn btn-warning d-flex  mx-auto" >Book Now</Conbtn>
    <div>
    <h3 className='phone'><i><b><IconName.MdPhone/>{contact}</b></i></h3>  

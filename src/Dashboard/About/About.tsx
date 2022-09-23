@@ -2,7 +2,9 @@ import React, { useCallback, useContext, useEffect, useRef } from 'react'
 import './About.css';
 import * as IconName from "react-icons/md";
 import { UserContext } from '../Dashboard';
-import {Demo} from 'jeni_aro';
+
+
+
 
 
 
@@ -26,9 +28,7 @@ const About = () => {
     <>
       <div id="about">
         <h1 className='animate-charcter'  >{firstText}</h1>
-<div className='demo'>
-  <Demo myQuotes='TreZzoH<<<<<<<>>>>>>> ......Work, Travel, Save, Repeat......<<<<<<<<<<>>>>>>>>>'/>
-</div>
+
         <h1 className='dot'>.</h1>
         <h5 className='mini'>
           Welcome to RreZzoh drop taxi</h5>
@@ -52,6 +52,7 @@ const About = () => {
 
         </div>
       </div>
+      
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import {Row,Container, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import View from '../../ReduxCrud/pages/View';
 

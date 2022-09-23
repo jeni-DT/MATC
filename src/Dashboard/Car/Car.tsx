@@ -3,9 +3,8 @@ import './Car.css';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { FcLike } from "react-icons/fc";
-import { GoThumbsdown } from "react-icons/go";
-import { useDispatch } from 'react-redux';
-import { AppDispatch} from '../../ReduxCrud/redux/Store';
+
+
 
 const Info =styled.p`
 text-align: center;
@@ -48,6 +47,7 @@ navigate('/main')
     <Like> <button type="button" className="btn btn-info" onClick={handleClick}> 
      <FcLike onClick={handleClick} ></FcLike>{calculation}
       </button></Like>
+      
     <h1 className='taxiavil'>Taxis available for Rend</h1>
     <div className='container'>
   <div className="row">
@@ -136,6 +136,7 @@ Rs.11/Km</Info>
     
   </div>
 </div>
+
 </div>
     </>
   )
