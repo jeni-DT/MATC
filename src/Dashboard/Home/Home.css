@@ -23,6 +23,15 @@
     
     
 }
+@media screen and (max-width:600px){
+    #Book{
+        text-align: center;
+        border-radius: 150px;
+        margin-left: 45px;
+        
+        
+    }
+     }
 .paragraph{
     text-align: center;
 color: white;

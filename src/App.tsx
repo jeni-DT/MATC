@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import LoginMain from './Admin/components/Login/LoginMain';
 import Main from './Admin/components/Register/Main';
-import global from './styles/global';
 import './App.css';
 
 import UsemediaQuery from './usemediaQuery';
@@ -15,6 +14,7 @@ import { UserContext } from './Dashboard/Dashboard';
 
 import Edit from './ReduxCrud/pages/Edit';
 import Feedback from './Dashboard/Feedback/Feedback';
+import { ErrorBoundaries } from './ErrorBoundaries/Errorboundaries';
 
 
 
@@ -28,9 +28,11 @@ function App() {
   // const matches = UsemediaQuery("(min-width:200px)");
   const firstText = 'TreZzoH'
   return (
+    <ErrorBoundaries>
     <UserContext.Provider value={firstText}>
       <div className="App">
        
+
         <Global />
         {/* {matches ? */}
         <Routes>
@@ -61,8 +63,10 @@ function App() {
         </Routes>
       
         {/* :"hello"} */}
+      
       </div>
     </UserContext.Provider>
+    </ErrorBoundaries>
   );
 }
 

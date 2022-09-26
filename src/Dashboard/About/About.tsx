@@ -37,7 +37,7 @@ const About = () => {
         <div className="container">
           <div className="row">
             <div className="col">
-              <img className="img-fluid w-100" src="https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/0taxi.jpg" alt="" />
+              <img className="img-fluid w-100" id='aboutimg' src="https://images.pexels.com/photos/5835452/pexels-photo-5835452.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
             </div>
             <div className="col">
               <mark><p ref={paraRef} style={{ color: "red" }} className="con"> TreZzoh</p></mark>

@@ -100,3 +100,46 @@
    background-color: black;
   
 }
+@media only screen and (max-width: 600px) {
+  .animate-charcter {
+
+    background-image: linear-gradient(-225deg,
+        #face0b 0%,
+        #070706 29%,
+        #ffbd09 67%,
+        #dd0808 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 300% auto;
+    color: #fff;
+    background-clip: text;
+    /* text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: inline-block;
+    font-size: 75px;
+    text-align: center;
+    margin-left: 5%;
+  }
+  
+  @keyframes textclip {
+    to {
+      background-position: 100% center;
+    }
+  }
+}
+#aboutimg{
+  background: fixed;
+  height: 90%;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media only screen and (max-width: 600px) {
+  #aboutimg{
+      background: fixed;
+      height: 100%;
+      
+  }
+}

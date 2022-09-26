@@ -1,4 +1,5 @@
 import React from 'react';
+import '../pages/Home.css'
 import { styled } from '@mui/material/styles';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -16,6 +17,7 @@ import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Box from '@mui/material/Box';
 import { useNavigate } from 'react-router-dom';
+
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -92,14 +94,14 @@ const Home = () => {
   const handleUpdate = (id: number, user: any) => {
     navigate(`/edit/${id}`, { state: user })
   }
-  const handleChange = () => {
-    navigate('/view')
-
-  }
+ 
   return (
     <div>
       <div className='add'>
+        <a href='/' >
         <Button variant='contained' color='primary'>Add Details</Button>
+        </a>
+        <h1 style={{color:'red'}}>Customers details</h1>
       </div>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 700 }} aria-label="customized table">
@@ -119,7 +121,7 @@ const Home = () => {
           </TableHead>
 
           <TableBody>
-
+            
             {userdemo && userdemo.map((user: any) => (
               <StyledTableRow key={user.id}>
                 <StyledTableCell align="center">{user.id}</StyledTableCell>

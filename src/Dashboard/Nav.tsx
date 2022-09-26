@@ -20,7 +20,7 @@ const Nav = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
 
-                <a href='#home' className="nav-link active">home</a>
+                <a href='#home' className="nav-link active">Home</a>
               </li>
               <a href='#available' className="nav-link active">Available</a>
             

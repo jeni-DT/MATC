@@ -12,3 +12,11 @@
     color: black;
     text-align: center;
 }
+@media screen and (max-width:600px){
+    .phone{
+        color: black;
+        text-align: center;
+        margin-right: 20px;
+        font-size: 15px;
+    }
+     }

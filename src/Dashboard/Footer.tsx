@@ -8,7 +8,16 @@ import {
   MDBBtn
 } from 'mdb-react-ui-kit';
 import * as IconName from "react-icons/md";
+import styled from 'styled-components';
 
+const FootStyle=styled.div`
+@media screen and (max-width:600px){
+  
+  font-size: 8px;
+ 
+}
+
+`
 export default function Foot() {
   return (
     <MDBFooter className='bg-dark text-center text-white'>
@@ -46,14 +55,14 @@ export default function Foot() {
         </a> */}
         <div className="container">
   <div className="row">
-    <div className="col col-3">
+    <FootStyle className="col col-3">
     <h4>About us</h4>
-            <ul>
+            <ul >
                <p>TreZzoH drop taxi provides all types of taxi services in and around Tamil Nadu. TreZzoH drop taxi offers the safest 24/7 taxi service in a cheap & best packages.</p>
              
              </ul>
-    </div>
-    <div className="col col-3">
+    </FootStyle>
+    <FootStyle className="col col-3">
     <div className='footer-col'>
             <h4>get help</h4>
             <ul>
@@ -63,8 +72,8 @@ export default function Foot() {
               
             </ul>
           </div>
-    </div>
-    <div className="col col-3">
+    </FootStyle>
+    <FootStyle className="col col-3">
       
     <div className='footer-col'>
             <h4>Other links</h4>
@@ -74,8 +83,8 @@ export default function Foot() {
              
             </ul>
           </div>
-    </div>
-    <div className="col col-3">
+    </FootStyle>
+    <FootStyle className="col col-3">
     <div className='footer-col'>
     <h4>Contact us</h4>
             <ul>
@@ -83,7 +92,7 @@ export default function Foot() {
                <p><i><IconName.MdPhone/>+91 9842012345</i></p> 
             </ul>
           </div>
-    </div>
+    </FootStyle>
   </div>
 </div>
         

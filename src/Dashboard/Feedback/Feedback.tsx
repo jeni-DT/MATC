@@ -1,9 +1,15 @@
 import React from 'react'
 import {Demo} from 'jeni_aro';
+import './Feedback.css';
 
 const Feedback = () => {
   return (
-    <div><Demo/></div>
+    <>
+    <div className='feed'>
+      <Demo/>
+      </div>
+     
+      </>  
   )
 }
 

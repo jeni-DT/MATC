@@ -43,6 +43,7 @@ navigate('/main')
    <div id='available'>
     
     <h1 className='taxi'>TreZzoH</h1>
+    
     <Likes>Likes :{count}</Likes>
     <Like> <button type="button" className="btn btn-info" onClick={handleClick}> 
      <FcLike onClick={handleClick} ></FcLike>{calculation}
@@ -96,12 +97,12 @@ Rs.11/Km</Info>
 </div>
     </div>
     <div className="col">
-    <div className="container">
+    <div className="container" >
   <div className="row">
     <div className="col">
     <div className="card" style={{width:"15rem"}}>
    
-  <img src="https://omdroptaxi.com/wp-content/uploads/sites/352/2021/10/1.png" className="card-img-top" alt="..."/>
+  <img src="https://imgd.aeplcdn.com/664x374/cw/ec/31432/Mahindra-Xylo-Exterior-109406.jpg?v=201711021421&q=75" className="card-img-top" alt="..."/>
    
   <div className="card-body"id='type'>
     <h5 className="card-title">Mahendra Xylo</h5>

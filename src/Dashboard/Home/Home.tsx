@@ -1,6 +1,6 @@
 import React from 'react'
 import {Row,Container, Col } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+
 import View from '../../ReduxCrud/pages/View';
 
 
@@ -10,7 +10,7 @@ import './Home.css'
 
 
 const Home = () => {
-  const navigate = useNavigate();
+ 
 
   return (
     <div className='body' id='home'>
@@ -24,11 +24,12 @@ const Home = () => {
             <br />
             <br />
 
-            {/* <br />
+            <br />
             <div className="mb-2">
-            <button type="button" className="btn btn-warning" id='Book'>Taxi</button>
-
-            </div> */}
+              <a href='/feedback'>
+            <button type="button" className="btn btn-warning" id='Book'>Give Feedback</button>
+            </a>
+            </div>
           </Col>
           <Col md={6}>
             <View />

@@ -3,7 +3,7 @@ import './Contact.css';
 import * as IconName from "react-icons/md";
 import styled from 'styled-components';
 import { UserContext } from '../Dashboard';
-import {Demo} from 'jeni_aro';
+
 const Dot=styled.h1`
 margin-left:90px;
 
@@ -31,6 +31,8 @@ height:550px;
   background:cover;
   text-align:center;
   font-size:20px;
+  width:100%;
+  height:400px;
 }
 `
 const Make=styled.h1`
@@ -64,7 +66,7 @@ text-align: center;
 
     @media screen and (max-width:600px){
     width:100px;
-    height: 10vh;
+    height: 6vh;
     border-radius: 20px;
     background-color: black;
     color: white;
@@ -84,6 +86,17 @@ box-shadow: 0px 0px 18px  black;
 outline: none;
 border: none;
 margin-left:120px;
+
+@media screen and (max-width:600px){
+  border-radius: 12px;
+background-color: black;
+color: white;
+padding: 1px 8px;
+box-shadow: 0px 0px 18px  black;
+outline: none;
+border: none;
+margin-left:5px;
+}
 ` 
 
 
@@ -105,14 +118,14 @@ const Contact = () => {
         <Dot>.</Dot>
         <Con>Make a call or fill form</Con>
         <Make>Just make a call and book us easily!</Make>
-        <Demo/>
+       
         
     </div>
     <div className="col-4">
    
     <Conbtn href="#bookform" className="btn btn-warning d-flex  mx-auto" >Book Now</Conbtn>
    <div>
-   <h3 className='phone'><i><b><IconName.MdPhone/>{contact}</b></i></h3>  
+   <h3 className='phone'style={{textAlign:"center"}}><i><b><IconName.MdPhone/>{contact}</b></i></h3>  
    
     <Contactbtn onClick={handleClick} >Contact</Contactbtn>
     </div>
