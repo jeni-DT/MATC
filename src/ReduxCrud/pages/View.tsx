@@ -21,7 +21,7 @@ const View = () => {
       .email('Email is invalid')
       .required('Email is required'),
     phonenumber: Yup.number()
-      // .min(10, 'Must be 10 numbers only')
+     
       .required('Required'),
     Nopass: Yup.number()
 

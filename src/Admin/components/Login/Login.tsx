@@ -7,7 +7,7 @@ import { TextField } from '../TextField';
 import createAxios from '../../../Axios/Index';
 
 
-interface items {
+interface Items {
   id: number,
   email: string,
   password: string,
@@ -45,7 +45,7 @@ export const Login = () => {
         if (adminData && adminData.length) {
           const adminvalues = JSON.parse(adminData);
 
-          const adminLogin = adminvalues.filter((datas: items) => {
+          const adminLogin = adminvalues.filter((datas: Items) => {
             if (datas.email === data.email && datas.password === data.password) {
               {
 

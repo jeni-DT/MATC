@@ -71,10 +71,9 @@
       #dd0808 100%);
   background-size: auto auto;
   background-clip: border-box;
-  background-size: 300% auto;
+  background-size: 600px auto;
   color: #fff;
-  background-clip: text;
-  /* text-fill-color: transparent; */
+  /* background-clip: text; */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
@@ -92,10 +91,7 @@
 .demo{
   color: white; 
   font-family: "arial";
-  font-size: 5em;
-  /* height: 5px; */
-  /* white-space: nowrap;
-  overflow: hidden; */
+  font-size: 5rem;
   width: 100%;
    background-color: black;
   

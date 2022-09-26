@@ -1,7 +1,7 @@
 import * as types from "./ActionType";
 import axios from "axios";
 import { AppDispatch } from "./Store";
-interface editValue {
+interface EditValue {
     name?: string,
     email?: string,
     phonenumber?: number,
@@ -12,21 +12,17 @@ interface editValue {
     time?: string,
     id?: number,
 }
-const getUsers = (users: editValue) => ({
+const getUsers = (users: EditValue) => ({
     type: types.GET_USERS,
     payload: users,
 
 })
-const postUsers = (users: editValue) => ({
+const postUsers = (users: EditValue) => ({
     type: types.ADD_DETAILS,
 
 
 })
-// const postLogin=(users:any)=>({
-//     type:types.POST_USERS,
 
-
-// })
 const userDeleted = () => ({
     type: types.DELETE_USER,
 
@@ -34,7 +30,7 @@ const userDeleted = () => ({
 const updateDetails = () => ({
     type: types.UPDATE_USERS,
 })
-const getDetails = (users: editValue) => ({
+const getDetails = (users: EditValue) => ({
     type: types.GET_UPDATE_USERS,
     payload: users,
 
@@ -70,7 +66,7 @@ export const deleteUser = (id: number) => {
             .catch((error) => console.log(error))
     }
 }
-export const updateUser = (details: editValue, id: number) => {
+export const updateUser = (details: EditValue, id: number) => {
     console.log("details", details)
     return function (dispatch: AppDispatch) {
         axios.put(`${process.env.REACT_APP_API}/${id}`, details)
@@ -82,7 +78,7 @@ export const updateUser = (details: editValue, id: number) => {
             .catch((error) => console.log(error))
     }
 }
-export const getuserValue = (updatevalue: editValue) => {
+export const getuserValue = (updatevalue: EditValue) => {
     console.log(updatevalue);
     return function (dispatch: AppDispatch) {
         axios.put(`${process.env.REACT_APP_API}/${updatevalue.id}`, updatevalue)
