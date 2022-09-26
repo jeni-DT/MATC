@@ -4,28 +4,22 @@ import LoginMain from './Admin/components/Login/LoginMain';
 import Main from './Admin/components/Register/Main';
 import './App.css';
 
-import UsemediaQuery from './usemediaQuery';
+
 import View from './ReduxCrud/pages/View';
 import Home from './ReduxCrud/pages/Home';
 
 import { LazyLoad } from './Admin/components/Lazyload';
-import Global from './styles/global';
 import { UserContext } from './Dashboard/Dashboard';
-
 import Edit from './ReduxCrud/pages/Edit';
 import Feedback from './Dashboard/Feedback/Feedback';
 import { ErrorBoundaries } from './ErrorBoundaries/Errorboundaries';
 
-
-
-
 const Dashboard = React.lazy(() => import("./Dashboard/Dashboard"));
-// const Navbar = React.lazy(() => import("./Admin/Navbar/Index"));
 const Car = React.lazy(() => import("./Dashboard/Car/Car"));
 const Contact = React.lazy(() => import("./Dashboard/Contact/Contact"));
 const About = React.lazy(() => import("./Dashboard/About/About"));
 function App() {
-  // const matches = UsemediaQuery("(min-width:200px)");
+
   const firstText = 'TreZzoH'
   return (
     <ErrorBoundaries>
@@ -33,8 +27,7 @@ function App() {
       <div className="App">
        
 
-        <Global />
-        {/* {matches ? */}
+        
         <Routes>
         
         
@@ -62,7 +55,6 @@ function App() {
 
         </Routes>
       
-        {/* :"hello"} */}
       
       </div>
     </UserContext.Provider>

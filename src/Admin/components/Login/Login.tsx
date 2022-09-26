@@ -79,7 +79,7 @@ export const Login = () => {
 
 
     >
-      {formik => (
+     
         <div>
           <h1 className="my-4 font-weight-bold .display-4" id='loginhead'>Login</h1>
           <Form>
@@ -94,9 +94,6 @@ export const Login = () => {
           </Form>
 
         </div>
-
-      )}
-
     </Formik>
 
   )

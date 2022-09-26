@@ -8,7 +8,6 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { makeStyles } from '@material-ui/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser, loadUsers } from '../redux/Actions';
 import { useEffect } from 'react';
@@ -40,42 +39,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-function createData(
-  name?: string,
-  email?: string,
-  phonenumber?: string,
-  Nopass?: string,
-  pickup?: string,
-  drop?: string,
-  date?: string,
-  time?: string,
-  id?: number,
 
-) {
-  return { name, email, phonenumber, Nopass, pickup, drop, date, time, id };
-}
 
-const rows = [
-  createData(),
-  createData(),
-  createData(),
-  createData(),
-  createData(),
-  createData(),
-  createData(),
-  createData(),
-  createData()
 
-];
-const useStyles = makeStyles({
-  table: {
-    marginTop: 100,
-    minwidth: 900,
-  }
-})
+
 
 const Home = () => {
-  const classes = useStyles();
+  
   const dispatch = useDispatch<AppDispatch>();
   const navigate = useNavigate();
   const userdemo = useSelector((state: RootState) => state.users.users)

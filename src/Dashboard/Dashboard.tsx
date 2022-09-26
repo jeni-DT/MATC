@@ -7,7 +7,7 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import Nav from './Nav';
 import createAxios from '../Axios/Index';
-import Feedback from './Feedback/Feedback';
+
 export const UserContext = createContext('');
 
 const Dashboard = () => {

@@ -59,7 +59,7 @@ const View = () => {
 
       }}
     >
-      {formik => (
+      
         <div id='bookform'>
           <h1 className='form'>Booking Form</h1>
 
@@ -115,8 +115,8 @@ const View = () => {
 
         </div>
 
-      )
-      }
+      
+     
     </Formik >
 
   )

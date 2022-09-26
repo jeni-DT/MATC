@@ -17,7 +17,7 @@ const getUsers = (users: editValue) => ({
     payload: users,
 
 })
-const postUsers = (users: any) => ({
+const postUsers = (users: editValue) => ({
     type: types.ADD_DETAILS,
 
 
@@ -49,7 +49,7 @@ export const loadUsers = () => {
             .catch((error) => console.log(error))
     }
 }
-export const addUsers = (values: any) => {
+export const addUsers = (values:any) => {
     return function (dispatch: AppDispatch) {
         axios.post(`${process.env.REACT_APP_API}`, values)
             .then((resp) => {

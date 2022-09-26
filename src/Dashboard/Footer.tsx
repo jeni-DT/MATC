@@ -49,10 +49,7 @@ export default function Foot() {
       </MDBContainer>
 
       <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        {/* © 2020 Copyright:
-        <a className='text-white' href='https://mdbootstrap.com/'>
-          MDBootstrap.com
-        </a> */}
+      
         <div className="container">
   <div className="row">
     <FootStyle className="col col-3">

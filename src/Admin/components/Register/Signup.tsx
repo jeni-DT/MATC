@@ -41,8 +41,7 @@ export const Signup = () => {
       }}
       validationSchema={validate}
       onSubmit={values => {
-        // localStorage.setItem("admin",JSON.stringify([values]));
-        // navigate('/login');
+     
         const admin = localStorage.getItem("admin");
         console.log("values", values)
         localStorage.setItem("admin", JSON.stringify([values]));
@@ -61,7 +60,7 @@ export const Signup = () => {
 
       }}
     >
-      {formik => (
+    
         <div>
           <h1 className="my-4 font-weight-bold .display-4">Sign Up</h1>
           <Form>
@@ -77,7 +76,7 @@ export const Signup = () => {
             </p>
           </Form>
         </div>
-      )}
+    
     </Formik>
   )
 }

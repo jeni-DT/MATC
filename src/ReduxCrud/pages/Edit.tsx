@@ -70,7 +70,7 @@ const Edit = () => {
 
         }}
       >
-        {formik => (
+      
           <div >
             <h1 className='form'>Update Form</h1>
             <Container>
@@ -98,7 +98,7 @@ const Edit = () => {
               </Form>
             </Container>
           </div>
-        )}
+      
       </Formik>
     </div>
 

@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState } from 'react'
+import React, { useContext,  useState } from 'react'
 import './Contact.css';
 import * as IconName from "react-icons/md";
 import styled from 'styled-components';

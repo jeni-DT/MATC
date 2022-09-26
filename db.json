@@ -54,17 +54,6 @@
       "date": "2022-09-30",
       "time": "22:02",
       "id": 5
-    },
-    {
-      "name": "mani",
-      "email": "mani@gmail.com",
-      "phonenumber": 6789045678,
-      "Nopass": "3",
-      "pickup": "trichy",
-      "drop": "Chennai",
-      "date": "2022-09-22",
-      "time": "23:59",
-      "id": 6
     }
   ],
   "cars": [
