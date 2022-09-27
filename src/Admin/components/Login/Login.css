@@ -3,6 +3,13 @@
     margin-top: 40px;
 
 }
+@media only screen and (max-width: 600px) {
+    #loginimg {
+        height: 100%;
+        margin-top: 30px;
+    
+    }
+}
 
 .label {
     margin-left: 60px;

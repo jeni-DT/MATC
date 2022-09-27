@@ -36,13 +36,13 @@ const Nav = () => {
                 <a href='/home' className="nav-link active">Booked</a>
               </li>
               <div className='signup'>
-                <Link to="/main">
-                  <button type="button" className="btn btn-danger">SignUp</button>
+                <Link to="/login">
+                  <button type="button" className="btn btn-danger">Login</button>
                 </Link>
               </div>
               <div className='loginnav'>
-                <Link to='/login'>
-                  <button type="button" className="btn btn-dark ">Login</button>
+                <Link to='/main'>
+                  <button type="button" className="btn btn-dark ">Logout</button>
                 </Link>
               </div>
             </ul>
